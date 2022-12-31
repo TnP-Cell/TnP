@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "training-and-placement-iiitbh",
+  "private_key_id": "e4716d52c589f38a2188267a17f96de6d0aacb00",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDHqq90V/EClExn\n5ad4SMePGedXi+3RivB4THkfTRAqEDeNIsEAKY4Nw2s8MJXWdWI4WzyLqDpJxu/+\nRMgB6FD7/Wdnp2s7ld5RcYVOmC0mpJ1qxt2rZEyxoiD/Qvtq0slF0DTFI3gQFTTf\nWKcQ155otruwxB1qzthdMJtyVwuUoiwNCvXdqkQc4tPE40slBw/f3SxzW5/iyuFd\n0sIU+CvYcsGIAJq2PdboPWSRn8b/49H7eXfTbEwNz8NTcYDCuMr0w5R+sEABAYgM\ndrN7+HiNKNnmU3ArhJONoVo3YfrXIlPMOdxGaaKdaYzBbrBUjpO0+ri2TL9VA/fK\nylC7wmQ1AgMBAAECggEALDVEBMgF4lLQef6UrmK64JnVKYKfZNJU/OW9uar35cBS\ndGrZ/b21qKF4iEqfmmzCEwVMagWU5knoUE2NVTLJX4nTT9V3PimoIDM411aFRLWU\n7xPZ971M59WkZbBAd331N4JqdK2uQy1W2A7KasW62qd+9hvuAXyL1lJRUKcqNr2v\nEaV+0KeMbPggjB6+bNXNRaG6YiopJ9GWKNnkY0VlWECbJYZRoH6vHxQh3+UvfgeL\nzhTDGC3BpsEcTyJdDi1qgmevfUVNs1umn28H92TrNCBnb1G5IlhFAB4PTzlMqMFk\nglPj6sWHna0ObV+uixLMRBQXybM2cQrFeaQBcLRTLwKBgQDyvL4FumGNoaIYY5tW\n1Xhk5Jz+gWxlg8blDblQ9FLUzJn7G76yQ90Ryh7XJ9X+Cxsch6G36LPCG/TuEIZd\nxwRe/LbYuj+VLuW86VBbSgDmPJAELdnVHUriDsqLsOljjXAOUuIvyqrGDgxTT3Z8\n3BssL7ikn1jdaAS0BwdrJ48E9wKBgQDSk3/Rw4hG5tyaLDLjdfy8psdmPCoBv4zt\nH7bVltqOZ88DBa9nIZ1Mi30pG13gk1gpe/vKPR0M8rt4+oCSv0DsKWjj8JpJQ6YZ\n9khO0c8o751nNGa4Zwn0q78qzsJEhsO905gL6sUk7O11Ps3+OuY3EWBj9d+HjpI+\nQwZr8JARMwKBgEm6bnVK8UqVp6iEyLANUu5CSjU7lnMXHZiBHKKsM2STaMnO2ZNH\n7aPzon5ziRoKwYde4w37Tm5NE44j0sw1IOzBEcCugZWMkxdYPqIbzj4gcxXx31JN\n/WrAV2EqsRkd4sVXA4DErC5QIgpD/pdaO56mOA04oUNOzu7nm6c+csBtAoGBAJo8\n5Zu8j933DVBz3VZUPqnjsxwEJ3SeXFf3KdFqrG0wRiXdjSuKKJA/f46TeACdjC7e\nnH/2oYexZ3XmbjSOl7wjXKvQuQG+5jQP+8iXzxgZ4n4MmMyq1FT9U4nEZfERkOBC\n0xSvgnVYgVmmhfWYKLXfKW4uUusUl7O5HkQDsVKXAoGBAM6E2pFJOhnCJoB18RUt\nCWMhq8tTUpXdmsqVcIT4KDHEfDxr4QzCxUgl3HFyrpIwH8ooqjWL3d6579l5XJZu\ndVgauv3Hai4ZDpUPrsAz6FXcLIaLsmQRpizYZp1Gc4qm+KDXIpZPLIXjyS/RQQIU\niCAmIUW4qB4CLHcXDIjO7O0c\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-3voti@training-and-placement-iiitbh.iam.gserviceaccount.com",
+  "client_id": "112672665407611510486",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-3voti%40training-and-placement-iiitbh.iam.gserviceaccount.com"
+}
