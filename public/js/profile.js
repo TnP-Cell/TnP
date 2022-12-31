@@ -71,5 +71,5 @@ fetch(`/api/showProfile`, {
 
 logout.addEventListener("click", () => {
   localStorage.removeItem("token");
-  window.location.href = "/";
+  window.location.href = "";
 });

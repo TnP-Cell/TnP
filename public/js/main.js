@@ -1,4 +1,4 @@
-// const url = "http://194.113.64.156/tnp";
+// const url = "http://194.113.64.156";
 // var url = "http://localhost:5000";
 
 var inst = document.querySelector("#inst1");
