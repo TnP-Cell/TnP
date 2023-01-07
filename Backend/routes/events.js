@@ -34,4 +34,12 @@ events.post("/eventsFetch", (req, res) => {
   });
 });
 
+events.delete("/deleteEvents", (req, res) => {
+  var eventsId = req.body.id;
+  eventsModel.deleteOne({_id:eventsId},(err,result)=>{
+    if(err) return res.status(400).json({status:-1});
+    res.status(200).json({status:0});
+  })
+});
+
 module.exports = events;

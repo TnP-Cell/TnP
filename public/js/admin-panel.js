@@ -137,15 +137,10 @@ const displayNews = (data) => {
       data[i].news.desc
     }</a>
         </div>
-        <div class="update-btn">
-            <button class="add-button" id="update-data" value="${
-              data[i]._id
-            }">Update</button>
-        </div>
         <div class="delete-btn">
-            <button class="add-button" onclick="deleteNews(${
+            <button class="add-button" onclick="deleteNews('${
               data[i]._id
-            });">Delete</button>
+            }');">Delete</button>
         </div>
     </div>`;
   }
@@ -156,13 +151,15 @@ const displayNews = (data) => {
 function deleteNews(id) {
   console.log(id);
   fetch(`/api/news/deleteNews`, {
-    method: "POST",
-    body: `${id}`,
+    method: "DELETE",
+    body: new URLSearchParams({ id: id }),
   })
     .then((res) => res.json())
     .then((data) => {
-      if (data.status == 0) alert("News Deleted Successfully");
-      else alert("Something Went Wrong!!");
+      if (data.status == 0) {
+        alert("News Deleted Successfully");
+        window.location.reload();
+      } else alert("Something Went Wrong!!");
     })
     .catch((err) => {
       alert(err);
@@ -183,15 +180,10 @@ const displayEvents = (data) => {
       data[i].events.desc
     }</a>
         </div>
-        <div class="update-btn">
-            <button class="add-button" id="update-data" value="${
-              data[i]._id
-            }">Update</button>
-        </div>
         <div class="delete-btn">
-            <button class="add-button" onclick="deleteEvents(${
-              data[i]._id
-            })">Delete</button>
+            <button class="add-button" onclick="deleteEvent('${data[
+              i
+            ]._id.toString()}');">Delete</button>
         </div>
     </div>`;
   }
@@ -199,16 +191,18 @@ const displayEvents = (data) => {
   eventsHistory.innerHTML = html;
 };
 
-function deleteEvents(id) {
-  console.log(id);
+function deleteEvent(id) {
+  // console.log(id);
   fetch(`/api/events/deleteEvents`, {
     method: "POST",
-    body: `${id}`,
+    body: new URLSearchParams({ id: id }),
   })
     .then((res) => res.json())
     .then((data) => {
-      if (data.status == 0) alert("Event Deleted Successfully");
-      else alert("Something Went Wrong!!");
+      if (data.status == 0) {
+        alert("Event Deleted Successfully");
+        window.location.reload();
+      } else alert("Something Went Wrong!!");
     })
     .catch((err) => {
       alert(err);

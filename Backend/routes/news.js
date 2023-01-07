@@ -10,7 +10,7 @@ news.post("/newsUpload", jwtverify, (req, res) => {
   var link = req.body.link;
   adminData.findOne({ _id: id }, (err, result) => {
     if (err) res.status(400).json({ status: -1 });
-    var d=new Date();
+    var d = new Date();
     var newsAdd = new newsModel({
       name: result.name,
       news: {
@@ -31,6 +31,14 @@ news.post("/newsFetch", (req, res) => {
   newsModel.find({}, (err, result) => {
     if (err) res.status(400).json({ status: -1 });
     res.status(200).json({ status: 0, data: result });
+  });
+});
+
+news.delete("/deleteNews", (req, res) => {
+  var newsId = req.body.id;
+  newsModel.deleteOne({ _id: newsId }, (err, result) => {
+    if (err) return res.status(400).json({ status: -1 });
+    res.status(200).json({ status: 0 });
   });
 });
 
