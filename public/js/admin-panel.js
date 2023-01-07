@@ -49,6 +49,7 @@ document.forms["news-add"].addEventListener("submit", (e) => {
     .then((data) => {
       if (data.status == 0) {
         alert("News Added Successfully!!");
+        window.location.reload();
         // fetchNewsData();
         // fetchEventsData();
         // historyItems.innerHTML = html;
@@ -74,6 +75,7 @@ document.forms["events-add"].addEventListener("submit", (e) => {
     .then((data) => {
       if (data.status == 0) {
         alert("Events Added Successfully!!");
+        window.location.reload();
         // fetchNewsData();
         // fetchEventsData();
         // historyItems.innerHTML = html;
@@ -97,8 +99,10 @@ document.forms["image-add"].addEventListener("submit", (e) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      if (data.status == 0) alert("Images Uploaded Successfully");
-      else alert("Something Went Wrong!!");
+      if (data.status == 0) {
+        alert("Images Uploaded Successfully");
+        window.location.reload();
+      } else alert("Something Went Wrong!!");
     })
     .catch((err) => {
       alert(err);
@@ -149,8 +153,7 @@ const displayNews = (data) => {
   newsHistory.innerHTML = html;
 };
 
-function deleteNews(id 
-  ) {
+function deleteNews(id) {
   console.log(id);
   fetch(`/api/news/deleteNews`, {
     method: "POST",
