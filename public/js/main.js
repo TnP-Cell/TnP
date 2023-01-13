@@ -1,14 +1,7 @@
 // const url = "http://194.113.64.156";
 // var url = "http://localhost:5000";
 
-var inst = document.querySelector("#inst1");
-var people = document.querySelector("#people1");
-var recruit = document.querySelector("#recruit1");
-var burger = document.querySelector(".burger");
-var cross = document.querySelector(".cross");
-var menu = document.querySelector(".menu");
 
-var nav = document.querySelectorAll(".nav-dropdown");
 var newsItems = document.querySelectorAll(".news-items");
 var eventItems = document.querySelector(".event-items");
 var newsContent = document.querySelector(".news-content");
@@ -79,15 +72,7 @@ newsContent.addEventListener("mouseout", () => {
 //   flag = 0;
 // });
 
-burger.addEventListener("click", () => {
-  menu.style.display = "flex";
-  burger.style.display = "none";
-});
 
-cross.addEventListener("click", () => {
-  menu.style.display = "none";
-  burger.style.display = "block";
-});
 
 // nav[0].addEventListener("mouseover", () => {
 //   nav[0].style.display = "block";

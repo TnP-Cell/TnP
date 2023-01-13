@@ -9,7 +9,7 @@ page.get("/:page", (req, res) => {
   var page = req.params.page;
   if (page == "institute") res.render("institute-page");
   else if (page == "profile") res.render("login-page");
-  else if (page == "contact") res.render("contact");
+  else if (page == "contact") res.render("contact-page");
   else if (page == "visitors") res.render("visitors");
   else if (page == "forRecruiters") res.render("for-recruiters");
   else if (page == "contactPage") res.render("contact-page");
