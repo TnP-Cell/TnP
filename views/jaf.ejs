@@ -129,366 +129,254 @@
                     </div>
                     <form id="recruit">
                         <div class="common-div">
-                            <h2>General Information:</h2>
+                            <h2>1. General Information:</h2>
                             <div class="row-div">
                                 <div class="form-group">
-                                    <h3 for="appNo">Application Number</h3>
+                                    <h3 for="appNo">Name of Organization:</h3>
                                     <input type="text" name="appNo" id="appNo" class="form-control"
-                                        placeholder="Enter Application Number" required>
+                                        placeholder="Enter Organisation Name" required>
                                 </div>
                             </div>
                             <div class="row-div">
                                 <div class="form-group">
-                                    <h3 for="fname">Candidate Name</h3>
+                                    <h3 for="fname">Website:</h3>
                                     <input type="text" name="fname" id="fname" class="form-control"
-                                        placeholder="Enter Your Name" required>
+                                        placeholder="Enter website" required>
                                 </div>
                                 <div class="form-group">
-                                    <h3 for="father-name">Father's Name</h3>
+                                    <h3 for="father-name">Location:</h3>
                                     <input type="text" name="fatherName" id="father-name" class="form-control"
-                                        placeholder="Enter Father's Name" required>
+                                        placeholder="Enter Address" required>
                                 </div>
                             </div>
                             <div class="row-div">
                                 <div class="form-group">
-                                    <h3 for="email">Email ID</h3>
-                                    <input type="email" name="email" id="email" class="form-control"
-                                        placeholder="Enter Email" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="phone">Mobile Number</h3>
-                                    <input type="tel" name="phone" id="phone" class="form-control"
-                                        placeholder="Enter Mobile" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="dob">D.O.B</h3>
-                                    <input type="date" name="dob" id="dob" class="form-control"
-                                        placeholder="Enter DD/MM/YYYY" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="city">City</h3>
-                                    <input type="text" name="city" id="city" class="form-control"
-                                        placeholder="Enter City" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="empIIITBH">Department</h3>
-                                    <select name="empIIITBH" id="emp-iiitbh">
-                                        <option selected disabled>Choose option</option>
-                                        <option value="1">Yes</option>
-                                        <option value="0">No</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="date">Enter Date</h3>
-                                    <input type="date" name="date" id="date" class="form-control"
-                                        placeholder="Enter DD/MM/YYYY" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="category">Category</h3>
+                                    <h3 for="category">Category:</h3>
                                     <select id="category" name="category">
-                                        <option value="general">GEN</option>
-                                        <option value="ews">EWS</option>
-                                        <option value="obc">OBC</option>
-                                        <option value="sc">SC</option>
-                                        <option value="st">ST</option>
+                                        <option value="mnc">MNC</option>
+                                        <option value="psu">PSU</option>
+                                        <option value="ngo">NGO</option>
+                                        <option value="oth">Other</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <h3 for="pwd">PWD</h3>
-                                    <select id="pwd" name="pwd">
-                                        <option value="0">NO</option>
-                                        <option value="1">YES</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="dpt">Department</h3>
-                                    <input type="text" name="dpt" id="dpt-name" class="form-control"
-                                        placeholder="Enter Your Department" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="father-name">Post</h3>
-                                    <input type="text" name="post" id="post-name" class="form-control"
-                                        placeholder="Enter Your Post" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="gnd">Gender</h3>
-                                    <select id="gnd" name="gender">
-                                        <option value="M">Male</option>
-                                        <option value="F">Female</option>
-                                        <option value="O">Other</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="married">Marital Status</h3>
-                                    <select id="married" name="married">
-                                        <option value="1">Married</option>
-                                        <option value="0">Un Married</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="nation">Nationality</h3>
-                                    <select id="nation" name="nation-name">
-                                        <option value="I">Indian</option>
-                                        <option value="O">Others</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="religion">Religion</h3>
-                                    <input type="text" name="religion" id="religion-name" class="form-control"
-                                        placeholder="Enter Your Religion" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="agp">AGP</h3>
-                                    <input type="text" name="agp" id="agp-name" class="form-control"
-                                        placeholder="Enter AGP" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="orcid">ORCID ID</h3>
-                                    <input type="text" name="orcid" id="orcid-id" class="form-control"
-                                        placeholder="Enter Orcid Id" required>
-                                </div>
-                            </div>
-                            <h2>Address:</h2>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="add-c">Address for Correspondence</h3>
-                                    <input type="text" name="add-c-1" id="add-c-name-1" class="form-control"
-                                        placeholder="Enter Address Line 1" required>
-                                    <input type="text" name="add-c-2" id="add-c-name-2" class="form-control"
-                                        placeholder="Enter Address line 2" required>
-                                    <input type="text" name="add-c-3" id="add-c-name-3" class="form-control"
-                                        placeholder="Enter Pincode" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="add-p">Permanent Address</h3>
-                                    <input type="text" name="add-p-1" id="add-p-name-1" class="form-control"
-                                        placeholder="Enter Address line 1" required>
-                                    <input type="text" name="add-p-2" id="add-p-name-2" class="form-control"
-                                        placeholder="Enter Address line 2" required>
-                                    <input type="text" name="add-p-3" id="add-p-name-3" class="form-control"
-                                        placeholder="Enter Pincode" required>
-                                </div>
-                            </div>
-                            <h2>Present Employment:</h2>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="ogn">Organisation</h3>
-                                    <input type="text" name="ogn" id="ogn-name" class="form-control"
-                                        placeholder="Enter Insitite/Organisation" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="dgn">Designation</h3>
-                                    <input type="text" name="dgn" id="dgn-name" class="form-control"
-                                        placeholder="Enter Designation" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="wrk">Work Type</h3>
-                                    <input type="text" name="wrk" id="wrk-name" class="form-control"
-                                        placeholder="Enter work type" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="pay">Pay Band/Level</h3>
-                                    <input type="text" name="pay" id="pay-name" class="form-control"
-                                        placeholder="Enter Pay Level" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="g-pay">Grade Pay</h3>
-                                    <input type="text" name="g-pay" id="g-pay-name" class="form-control"
-                                        placeholder="Enter Grade Pay" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="salary">Total Salary</h3>
-                                    <input type="text" name="salary" id="salary-name" class="form-control"
-                                        placeholder="Enter Salary" required>
-                                </div>
-                            </div>
-                            <h2>Educational Information:</h2>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="dge">Degree</h3>
-                                    <input type="text" name="dge" id="dge-name" class="form-control"
-                                        placeholder="Enter Degree" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="branch">Specialization</h3>
-                                    <input type="text" name="branch" id="branch-name" class="form-control"
-                                        placeholder="Enter Branch of education" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="college">University Name</h3>
-                                    <input type="text" name="college" id="college-name" class="form-control"
-                                        placeholder="Enter College" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="year">Passing Year</h3>
-                                    <input type="text" name="year" id="year-name" class="form-control"
-                                        placeholder="Enter YYYY" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="marks">Marks Percentage/ CGPA</h3>
-                                    <input type="text" name="marks" id="marks-name" class="form-control"
-                                        placeholder="Enter Marks Obtained" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="division">Grade/Division</h3>
-                                    <input type="text" name="division" id="division-name" class="form-control"
-                                        placeholder="Enter Qualifiction Division" required>
-                                </div>
-                            </div>
-                            <h2>Degree Details:</h2>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="dgt">Type of Degree</h3>
-                                    <input type="text" name="dgt" id="dgt" class="form-control"
-                                        placeholder="Enter Type of Degree" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="title">Title</h3>
-                                    <input type="text" name="title" id="title-name" class="form-control"
-                                        placeholder="Enter Degree Title" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="ra">Research Area</h3>
-                                    <input type="text" name="ra" id="ra" class="form-control"
-                                        placeholder="Enter Research Area" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="d-date">Degree Awarded Date</h3>
-                                    <input type="date" name="d-date" id="d-date-name" class="form-control"
-                                        placeholder="Enter/Select Date" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="n-add">Name of Supervisors & Address</h3>
-                                    <input type="text" name="n-add" id="n-add" class="form-control"
-                                        placeholder="Enter Name & Address" required>
-                                </div>
-                            </div>
-                            <h2>Experiences:</h2>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="e-type">Type of Experience</h3>
-                                    <input type="text" name="e-type" id="e-type-name" class="form-control"
-                                        placeholder="Enter Experience Type" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="inds">Industry</h3>
-                                    <input type="text" name="inds" id="inds-name" class="form-control"
+                                    <h3 for="phone">Industry Sector:</h3>
+                                    <input type="tel" name="phone" id="phone" class="form-control"
                                         placeholder="Enter Industry" required>
                                 </div>
                             </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="c-org">Company/Organisation</h3>
-                                    <input type="text" name="c-org" id="c-org-name" class="form-control"
-                                        placeholder="Enter Company/Organisation Name" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="from">From</h3>
-                                    <input type="date" name="from" id="from-name" class="form-control"
-                                        placeholder="Enter Starting Date" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="till">Till</h3>
-                                    <input type="date" name="till" id="till-name" class="form-control"
-                                        placeholder="Enter End Date" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="w-type">Nature of Work</h3>
-                                    <input type="text" name="w-type" id="w-type-name" class="form-control"
-                                        placeholder="Enter Work Type" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="w-dsg">Designation</h3>
-                                    <input type="txt" name="w-dsg" id="w-dsg-name" class="form-control"
-                                        placeholder="Enter Work Designation" required>
-                                </div>
-                            </div>
-                            <h2>Publications/Books/Journals:</h2>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="a-type">Type</h3>
-                                    <input type="text" name="a-type" id="a-type-name" class="form-control"
-                                        placeholder="Enter Publication Type" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="n-number">National (Numbers)</h3>
-                                    <input type="txt" name="n-number" id="n-number-name" class="form-control"
-                                        placeholder="Enter Number Of Publications" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="i-number">International (Numbers)</h3>
-                                    <input type="txt" name="i-number" id="i-number-name" class="form-control"
-                                        placeholder="Enter Number Of Publications" required>
-                                </div>
-                            </div>
-                            <h2>Award/Honours/Prizes:</h2>
                             <div class="form-group">
-                                <h3 for="aw-type">Award Details</h3>
-                                <input type="text" name="aw-type" id="aw-type-name" class="form-control"
-                                    placeholder="Enter Award Details" required>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="aw-time">Date or Year</h3>
-                                    <input type="date" name="aw-time" id="aw-time" class="form-control"
-                                        placeholder="Enter/Select Date" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="aw-by">Awarded by</h3>
-                                    <input type="txt" name="aw-by" id="aw-by-name" class="form-control"
-                                        placeholder="Enter Work Designation" required>
-                                </div>
-                            </div>
-                            <h2>Future Plans/ Interest:</h2>
-                            <div class="form-group">
-                                <h3 for="plans">Research plan/ Course plan/ Other Interest:</h3>
-                                <textarea name="plans" id="plans" cols="30" rows="10"></textarea>
-                            </div>
-                            <h2>Name Two referees with complete contact details</h2>
-                            <div class="form-group">
-                                <h3 for="refer-1">First</h3>
-                                <input type="text" name="refer-1-name" id="refer-1-name" class="form-control"
-                                    placeholder="Enter Name, Contact & Address" required>
-                            </div>
-                            <div class="form-group">
-                                <h3 for="refer-2">Second</h3>
-                                <input type="txt" name="refer-2" id="refer-2-name" class="form-control"
-                                    placeholder="Enter Name, Contact & Address" required>
-                            </div>
-                            <h2>Any Other Information:</h2>
-                            <div class="form-group">
-                                <h3 for="o-info">Feedback/Request/Others:</h3>
+                                <h3 for="o-info">About Company:</h3>
                                 <textarea name="o-info" id="o-info" cols="30" rows="10"></textarea>
                             </div>
-                        </div>
+                            <h2>2.a Contact Details: Head HR</h2>
+                            <div class="row-div">
+                                <div class="form-group">
+                                    <h3 for="phone">Name of Head HR:</h3>
+                                    <input type="text" name="phone" id="phone" class="form-control"
+                                        placeholder="Enter Head HR Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <h3 for="phone">Phone:</h3>
+                                    <input type="tel" name="city" id="city" class="form-control"
+                                        placeholder="Enter Phone Number" required>
+                                </div>
+                            </div>
+                            <div class="row-div">
+                                <div class="form-group">
+                                    <h3 for="mail">Email:</h3>
+                                    <input type="email" name="city" id="city" class="form-control"
+                                        placeholder="Enter Email-ID" required>
+                                </div>
+                                <div class="form-group">
+                                    <h3 for="phone">Landline:</h3>
+                                    <input type="tel" name="city" id="city" class="form-control"
+                                        placeholder="Enter Tel Number" required>
+                                </div>
+                            </div>
+                            <h2>2.b Contact Details: First Contact Person</h2>
+                            <div class="row-div">
+                                <div class="form-group">
+                                    <h3 for="phone">Name of First Contact Person:</h3>
+                                    <input type="text" name="phone" id="phone" class="form-control"
+                                        placeholder="Enter Person Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <h3 for="phone">Phone:</h3>
+                                    <input type="tel" name="city" id="city" class="form-control"
+                                        placeholder="Enter Phone Number" required>
+                                </div>
+                            </div>
+                            <div class="row-div">
+                                <div class="form-group">
+                                    <h3 for="mail">Email:</h3>
+                                    <input type="email" name="city" id="city" class="form-control"
+                                        placeholder="Enter Email-ID" required>
+                                </div>
+                                <div class="form-group">
+                                    <h3 for="phone">Landline:</h3>
+                                    <input type="tel" name="city" id="city" class="form-control"
+                                        placeholder="Enter Tel Number" required>
+                                </div>
+                            </div>
+                            <h2>3. Job Profile Details</h2>
+                            <div class="row-div">
+                                <div class="form-group">
+                                    <h3 for="gnd">Job Offer Type</h3>
+                                    <select id="gnd" name="gender">
+                                        <option value="M">Full Time</option>
+                                        <option value="F">Internship</option>
+                                        <option value="O">Full Time + Internship</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <h3 for="married">Selection Type</h3>
+                                    <select id="married" name="married">
+                                        <option value="1">On Campus</option>
+                                        <option value="0">Off Campus</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row-div">
+                                <div class="form-group">
+                                    <h3 for="nation">Eligible Batches:</h3>
+                                    <select id="nation" name="nation-name" multiple>
+                                        <option value="I">B.Tech 2024</option>
+                                        <option value="O">M.Tech 2024</option>
+                                        <option value="O">B.Tech 2025</option>
+                                        <option value="O">M.Tech 2025</option>
+                                        <option value="O">B.Tech 2026</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <h3 for="nation">Eligible Branches:</h3>
+                                    <select id="nation" name="nation-name" multiple>
+                                        <option value="I">CSE</option>
+                                        <option value="O">ECE</option>
+                                        <option value="O">MEA</option>
+                                        <option value="O">MAC</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row-div">
+                                <div class="form-group">
+                                    <h3 for="agp">Job Designation:</h3>
+                                    <input type="text" name="agp" id="agp-name" class="form-control"
+                                        placeholder="Enter Designation" required>
+                                </div>
+                                <div class="form-group">
+                                    <h3 for="orcid">Place of Posting:</h3>
+                                    <input type="text" name="orcid" id="orcid-id" class="form-control"
+                                        placeholder="Enter City and Country" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h3 for="o-info">Job Description / Summary:</h3>
+                                <textarea name="o-info" id="o-info" cols="30" rows="10"></textarea>
+                            </div>
+                            <h2>4. Salary Details:</h2>
+                            <div class="row-div">
+                                <div class="form-group">
+                                    <h3 for="agp">Remuneration for Internship:</h3>
+                                    <input type="text" name="agp" id="agp-name" class="form-control"
+                                        placeholder="Enter Remuneration" required>
+                                </div>
+                                <div class="form-group">
+                                    <h3 for="orcid">Cost to Co. (CTC):</h3>
+                                    <input type="text" name="orcid" id="orcid-id" class="form-control"
+                                        placeholder="Enter CTC" required>
+                                </div>
+                            </div>
+                            <div class="row-div">
+                                <div class="form-group">
+                                    <h3 for="agp">Gross:</h3>
+                                    <input type="text" name="agp" id="agp-name" class="form-control"
+                                        placeholder="Enter Gross" required>
+                                </div>
+                                <div class="form-group">
+                                    <h3 for="orcid">Take-Home:</h3>
+                                    <input type="text" name="orcid" id="orcid-id" class="form-control"
+                                        placeholder="Enter Take-Home" required>
+                                </div>
+                            </div>
+                            <div class="row-div">
+                                <div class="form-group">
+                                    <h3 for="agp">Bonus/Perks/Incentives:</h3>
+                                    <input type="text" name="agp" id="agp-name" class="form-control"
+                                        placeholder="Enter Bonus" required>
+                                </div>
+                                <div class="form-group">
+                                    <h3 for="orcid">Re-Location:</h3>
+                                    <input type="text" name="orcid" id="orcid-id" class="form-control"
+                                        placeholder="Enter relocation" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h3 for="o-info">Bond or Contract (Specify details if any):</h3>
+                                <textarea name="o-info" id="o-info" cols="30" rows="10"></textarea>
+                            </div>
+                            <h2>5. Process:</h2>
+                            <div class="row-div">
+                                <div class="form-group">
+                                    <h3 for="ogn">Mode of Selection:</h3>
+                                    <select id="nation" name="nation-name">
+                                        <option value="I">Shortlist from CVs</option>
+                                        <option value="O">Online Test</option>
+                                        <option value="O">Written Test</option>
+                                        <option value="O">Technical Interview</option>
+                                        <option value="O">Personal Interview</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <h3 for="dgn">Number of Rounds:</h3>
+                                    <input type="text" name="dgn" id="dgn-name" class="form-control"
+                                        placeholder="Enter number of rounds" required>
+                                </div>
+                            </div>
+                            <div class="row-div">
+                                <div class="form-group">
+                                    <h3 for="wrk">Eligibility Criteria (CPI cutoff on a scale of 0-10):</h3>
+                                    <input type="text" name="wrk" id="wrk-name" class="form-control"
+                                        placeholder="Enter CPI Cutoff" required>
+                                </div>
+                                <div class="form-group">
+                                    <h3 for="pay">Preferred Period of Visit for Recruitment:</h3>
+                                    <input type="text" name="pay" id="pay-name" class="form-control"
+                                        placeholder="Enter Period" required>
+                                </div>
+                            </div>
+                            <h2>6. Preferance & Requirements:</h2>
+                            <div class="row-div">
+                                <div class="form-group">
+                                    <h3 for="dge">Preferred Location:</h3>
+                                    <select id="nation" name="nation-name">
+                                        <option value="I">IIIT Bhagalpur Campus</option>
+                                        <option value="O">NIT Patna</option>
+                                        <option value="O">IIT GUwahati</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <h3 for="branch">Number of offers (expected):</h3>
+                                    <input type="text" name="branch" id="branch-name" class="form-control"
+                                        placeholder="Enter of expected offers" required>
+                                </div>
+                            </div>
+                            <div class="row-div">
+                                <div class="form-group">
+                                    <h3 for="college">Number of members visiting IIIT Bhagalpur campus:</h3>
+                                    <input type="text" name="college" id="college-name" class="form-control"
+                                        placeholder="Enter number of members visiting IIIT Bhagalpur campus" required>
+                                </div>
+                                <div class="form-group">
+                                    <h3 for="year">No. of rooms required for the selection process:</h3>
+                                    <input type="text" name="year" id="year-name" class="form-control"
+                                        placeholder="Enter number of days" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h3 for="o-info">Other requirements if any:</h3>
+                                <textarea name="o-info" id="o-info" cols="30" rows="10"></textarea>
+                            </div>
                         <div class="new_btn submit-btn">
                             <button type="submit" class="btn">Done</button>
                         </div>
