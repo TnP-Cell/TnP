@@ -19,6 +19,7 @@ page.get("/:page", (req, res) => {
   else if (page == "gallery") res.render("gallery");
   else if (page == "aDashboard") res.render("admin-panel");
   else if (page == "dashboard") res.render("student-page");
+  else if (page=="faq") res.render("faq");
   else if (page == "resume") res.render("resume-builder", { check: false });
 });
 
