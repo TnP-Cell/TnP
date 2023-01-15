@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recruitment Portal | IIIT Bhagalpur</title>
 
-    <link rel="stylesheet" href="/css\jaf.css">
-    <link rel="icon" type="image/png" href="/assets/square-logo.png" sizes="96x96">
+    <link rel="stylesheet" href="/css\jaf.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/square-logo.png"
+      sizes="96x96"
+    />
     <script defer type="text/javascript" src="/js/jaf.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- <nav class="navbar">
         <div class="logo">
             <div class="image">
@@ -39,365 +43,600 @@
     </nav> -->
 
     <section class="job-section">
-        <div class="main-container">
-            <div class="banner">
-                <img src="\assets\jaf-banner.png" alt="JAF - Job Announcement Form">
-            </div>
-            <div class="job-container">
-                <div class="instruction">
-                    <h1>1. Instructions</h1>
-                </div>
-                <div class="forms">
-                    <h1>2. Fill Details</h1>
-                </div>
-                <div class="print">
-                    <h1>3. Submit</h1>
-                </div>
-            </div>
-            <div class="job-content-1">
-                <div class="heading">
-                    <h1>Instructions</h1>
-                </div>
-                <div class="rules">
-                    <div class="bottom">
-                        <ul>
-                            <li>
-                                Companies are contacted by the Placement office or Placement
-                                cell (authorized student representatives) and invitations
-                                are extended, providing relevant information and the
-                                placement brochure.
-                            </li>
-                            <li>
-                                Companies are given an exclusive login id in the website
-                                after they submit the filled-in job announcement forms (JAF)
-                                via email.
-                            </li>
-                            <li>
-                                The JAFs are made available online, which helps the willing
-                                students to register for the same.
-                            </li>
-                            <li>
-                                The Placement Cell and the Company confer and finalize the
-                                date for pre-placement talks if necessary. During the
-                                pre-placement talk the company team can interact with the
-                                students and impart to them, an idea of what the company
-                                requires.
-                            </li>
-                            <li>
-                                Each student who has registered for a particular company
-                                submits his/her resume so that the company can shortlist the
-                                applied students according to their grade or any other
-                                criteria the company demands.
-                            </li>
-                            <li>
-                                A detailed schedule is prepared by the Placement Cell
-                                evaluating the job offer, prospects, student intake and the
-                                like. The schedule is confirmed with all the companies that
-                                have applied to recruit.
-                            </li>
-                            <li>
-                                The companies/organizations visit the IIIT Bhagalpur campus/
-                                IIT Guwahati campus, meet the registered (or shortlisted as
-                                the case may be) students, and conduct the interviews, tests
-                                or group discussion sessions in accordance with their
-                                respective recruitment process. The date of the interview
-                                and other sessions should be in compliance with the mutually
-                                confirmed schedule discussed earlier.
-                            </li>
-                            <li>
-                                The companies are required to prepare and submit, with a
-                                written confirmation letter the list of students who are
-                                selected after the interview process, on the day of the
-                                interview itself.
-                            </li>
-                            <li>
-                                The job offer letters are to reach the Placement Cell, in
-                                due course of time.
-                            </li>
-                            <li>
-                                In case a student gets a job offer, he/she is not entitled
-                                to appear for further tests/interviews by any other company.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="job-content-2">
-                <div class="form-container">
-                    <div class="heading">
-                        <h1>Registration Details</h1>
-                    </div>
-                    <form id="recruit">
-                        <div class="common-div">
-                            <h2>1. General Information:</h2>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="appNo">Name of Organization:</h3>
-                                    <input type="text" name="appNo" id="appNo" class="form-control"
-                                        placeholder="Enter Organisation Name" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="fname">Website:</h3>
-                                    <input type="text" name="fname" id="fname" class="form-control"
-                                        placeholder="Enter website" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="father-name">Location:</h3>
-                                    <input type="text" name="fatherName" id="father-name" class="form-control"
-                                        placeholder="Enter Address" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="category">Category:</h3>
-                                    <select id="category" name="category">
-                                        <option value="mnc">MNC</option>
-                                        <option value="psu">PSU</option>
-                                        <option value="ngo">NGO</option>
-                                        <option value="oth">Other</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="phone">Industry Sector:</h3>
-                                    <input type="tel" name="phone" id="phone" class="form-control"
-                                        placeholder="Enter Industry" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <h3 for="o-info">About Company:</h3>
-                                <textarea name="o-info" id="o-info" cols="30" rows="10"></textarea>
-                            </div>
-                            <h2>2.a Contact Details: Head HR</h2>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="phone">Name of Head HR:</h3>
-                                    <input type="text" name="phone" id="phone" class="form-control"
-                                        placeholder="Enter Head HR Name" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="phone">Phone:</h3>
-                                    <input type="tel" name="city" id="city" class="form-control"
-                                        placeholder="Enter Phone Number" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="mail">Email:</h3>
-                                    <input type="email" name="city" id="city" class="form-control"
-                                        placeholder="Enter Email-ID" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="phone">Landline:</h3>
-                                    <input type="tel" name="city" id="city" class="form-control"
-                                        placeholder="Enter Tel Number" required>
-                                </div>
-                            </div>
-                            <h2>2.b Contact Details: First Contact Person</h2>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="phone">Name of First Contact Person:</h3>
-                                    <input type="text" name="phone" id="phone" class="form-control"
-                                        placeholder="Enter Person Name" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="phone">Phone:</h3>
-                                    <input type="tel" name="city" id="city" class="form-control"
-                                        placeholder="Enter Phone Number" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="mail">Email:</h3>
-                                    <input type="email" name="city" id="city" class="form-control"
-                                        placeholder="Enter Email-ID" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="phone">Landline:</h3>
-                                    <input type="tel" name="city" id="city" class="form-control"
-                                        placeholder="Enter Tel Number" required>
-                                </div>
-                            </div>
-                            <h2>3. Job Profile Details</h2>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="gnd">Job Offer Type</h3>
-                                    <select id="gnd" name="gender">
-                                        <option value="M">Full Time</option>
-                                        <option value="F">Internship</option>
-                                        <option value="O">Full Time + Internship</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="married">Selection Type</h3>
-                                    <select id="married" name="married">
-                                        <option value="1">On Campus</option>
-                                        <option value="0">Off Campus</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="nation">Eligible Batches:</h3>
-                                    <select id="nation" name="nation-name" multiple>
-                                        <option value="I">B.Tech 2024</option>
-                                        <option value="O">M.Tech 2024</option>
-                                        <option value="O">B.Tech 2025</option>
-                                        <option value="O">M.Tech 2025</option>
-                                        <option value="O">B.Tech 2026</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="nation">Eligible Branches:</h3>
-                                    <select id="nation" name="nation-name" multiple>
-                                        <option value="I">CSE</option>
-                                        <option value="O">ECE</option>
-                                        <option value="O">MEA</option>
-                                        <option value="O">MAC</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="agp">Job Designation:</h3>
-                                    <input type="text" name="agp" id="agp-name" class="form-control"
-                                        placeholder="Enter Designation" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="orcid">Place of Posting:</h3>
-                                    <input type="text" name="orcid" id="orcid-id" class="form-control"
-                                        placeholder="Enter City and Country" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <h3 for="o-info">Job Description / Summary:</h3>
-                                <textarea name="o-info" id="o-info" cols="30" rows="10"></textarea>
-                            </div>
-                            <h2>4. Salary Details:</h2>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="agp">Remuneration for Internship:</h3>
-                                    <input type="text" name="agp" id="agp-name" class="form-control"
-                                        placeholder="Enter Remuneration" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="orcid">Cost to Co. (CTC):</h3>
-                                    <input type="text" name="orcid" id="orcid-id" class="form-control"
-                                        placeholder="Enter CTC" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="agp">Gross:</h3>
-                                    <input type="text" name="agp" id="agp-name" class="form-control"
-                                        placeholder="Enter Gross" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="orcid">Take-Home:</h3>
-                                    <input type="text" name="orcid" id="orcid-id" class="form-control"
-                                        placeholder="Enter Take-Home" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="agp">Bonus/Perks/Incentives:</h3>
-                                    <input type="text" name="agp" id="agp-name" class="form-control"
-                                        placeholder="Enter Bonus" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="orcid">Re-Location:</h3>
-                                    <input type="text" name="orcid" id="orcid-id" class="form-control"
-                                        placeholder="Enter relocation" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <h3 for="o-info">Bond or Contract (Specify details if any):</h3>
-                                <textarea name="o-info" id="o-info" cols="30" rows="10"></textarea>
-                            </div>
-                            <h2>5. Process:</h2>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="ogn">Mode of Selection:</h3>
-                                    <select id="nation" name="nation-name">
-                                        <option value="I">Shortlist from CVs</option>
-                                        <option value="O">Online Test</option>
-                                        <option value="O">Written Test</option>
-                                        <option value="O">Technical Interview</option>
-                                        <option value="O">Personal Interview</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="dgn">Number of Rounds:</h3>
-                                    <input type="text" name="dgn" id="dgn-name" class="form-control"
-                                        placeholder="Enter number of rounds" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="wrk">Eligibility Criteria (CPI cutoff on a scale of 0-10):</h3>
-                                    <input type="text" name="wrk" id="wrk-name" class="form-control"
-                                        placeholder="Enter CPI Cutoff" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="pay">Preferred Period of Visit for Recruitment:</h3>
-                                    <input type="text" name="pay" id="pay-name" class="form-control"
-                                        placeholder="Enter Period" required>
-                                </div>
-                            </div>
-                            <h2>6. Preferance & Requirements:</h2>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="dge">Preferred Location:</h3>
-                                    <select id="nation" name="nation-name">
-                                        <option value="I">IIIT Bhagalpur Campus</option>
-                                        <option value="O">NIT Patna</option>
-                                        <option value="O">IIT GUwahati</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="branch">Number of offers (expected):</h3>
-                                    <input type="text" name="branch" id="branch-name" class="form-control"
-                                        placeholder="Enter of expected offers" required>
-                                </div>
-                            </div>
-                            <div class="row-div">
-                                <div class="form-group">
-                                    <h3 for="college">Number of members visiting IIIT Bhagalpur campus:</h3>
-                                    <input type="text" name="college" id="college-name" class="form-control"
-                                        placeholder="Enter number of members visiting IIIT Bhagalpur campus" required>
-                                </div>
-                                <div class="form-group">
-                                    <h3 for="year">No. of rooms required for the selection process:</h3>
-                                    <input type="text" name="year" id="year-name" class="form-control"
-                                        placeholder="Enter number of days" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <h3 for="o-info">Other requirements if any:</h3>
-                                <textarea name="o-info" id="o-info" cols="30" rows="10"></textarea>
-                            </div>
-                        <div class="new_btn submit-btn">
-                            <button type="submit" class="btn">Done</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="job-content-3">
-                <div class="heading">
-                    <h1>Submition Details</h1>
-                </div>
-                <div class="preview">
-                    <p>By submitting this document, You are confirming that all the details provided by you are correct and accurate to the best of your knowledge. You understand that any false or misleading information may result in rejection.</p>
-                </div>
-                <div class="new_btn submit-btn">
-                    <button type="submit" class="btn">Final Submit</button>
-                </div>
-            </div>
+      <div class="main-container">
+        <div class="banner">
+          <img src="\assets\jaf-banner.png" alt="JAF - Job Announcement Form" />
         </div>
+        <div class="job-container">
+          <div class="instruction">
+            <h1>1. Instructions</h1>
+          </div>
+          <div class="forms">
+            <h1>2. Fill Details</h1>
+          </div>
+          <div class="print">
+            <h1>3. Submit</h1>
+          </div>
+        </div>
+        <div class="job-content-1">
+          <div class="heading">
+            <h1>Instructions</h1>
+          </div>
+          <div class="rules">
+            <div class="bottom">
+              <ul>
+                <li>
+                  Companies are contacted by the Placement office or Placement
+                  cell (authorized student representatives) and invitations are
+                  extended, providing relevant information and the placement
+                  brochure.
+                </li>
+                <li>
+                  Companies are given an exclusive login id in the website after
+                  they submit the filled-in job announcement forms (JAF) via
+                  email.
+                </li>
+                <li>
+                  The JAFs are made available online, which helps the willing
+                  students to register for the same.
+                </li>
+                <li>
+                  The Placement Cell and the Company confer and finalize the
+                  date for pre-placement talks if necessary. During the
+                  pre-placement talk the company team can interact with the
+                  students and impart to them, an idea of what the company
+                  requires.
+                </li>
+                <li>
+                  Each student who has registered for a particular company
+                  submits his/her resume so that the company can shortlist the
+                  applied students according to their grade or any other
+                  criteria the company demands.
+                </li>
+                <li>
+                  A detailed schedule is prepared by the Placement Cell
+                  evaluating the job offer, prospects, student intake and the
+                  like. The schedule is confirmed with all the companies that
+                  have applied to recruit.
+                </li>
+                <li>
+                  The companies/organizations visit the IIIT Bhagalpur campus/
+                  IIT Guwahati campus, meet the registered (or shortlisted as
+                  the case may be) students, and conduct the interviews, tests
+                  or group discussion sessions in accordance with their
+                  respective recruitment process. The date of the interview and
+                  other sessions should be in compliance with the mutually
+                  confirmed schedule discussed earlier.
+                </li>
+                <li>
+                  The companies are required to prepare and submit, with a
+                  written confirmation letter the list of students who are
+                  selected after the interview process, on the day of the
+                  interview itself.
+                </li>
+                <li>
+                  The job offer letters are to reach the Placement Cell, in due
+                  course of time.
+                </li>
+                <li>
+                  In case a student gets a job offer, he/she is not entitled to
+                  appear for further tests/interviews by any other company.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="job-content-2">
+          <div class="form-container">
+            <div class="heading">
+              <h1>Registration Details</h1>
+            </div>
+            <form id="recruit">
+              <div class="common-div">
+                <h2>1. General Information:</h2>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="appNo">Name of Organization:</h3>
+                    <input
+                      type="text"
+                      name="orgName"
+                      id="appNo"
+                      class="form-control"
+                      placeholder="Enter Organisation Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="fname">Website:</h3>
+                    <input
+                      type="text"
+                      name="website"
+                      id="fname"
+                      class="form-control"
+                      placeholder="Enter website"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <h3 for="father-name">Location:</h3>
+                    <input
+                      type="text"
+                      name="postalAddress"
+                      id="father-name"
+                      class="form-control"
+                      placeholder="Enter Address"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="category">Category:</h3>
+                    <select id="category" name="category">
+                      <option value="mnc">MNC</option>
+                      <option value="psu">PSU</option>
+                      <option value="ngo">NGO</option>
+                      <option value="oth">Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <h3 for="phone">Industry Sector:</h3>
+                    <input
+                      type="tel"
+                      name="industrySector"
+                      id="phone"
+                      class="form-control"
+                      placeholder="Enter Industry"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h3 for="o-info">About Company:</h3>
+                  <textarea
+                    name="aboutOrg"
+                    id="o-info"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </div>
+                <h2>2.a Contact Details: Head HR</h2>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="phone">Name of Head HR:</h3>
+                    <input
+                      type="text"
+                      name="hhname"
+                      id="phone"
+                      class="form-control"
+                      placeholder="Enter Head HR Name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <h3 for="phone">Phone:</h3>
+                    <input
+                      type="tel"
+                      name="hhmobile"
+                      id="city"
+                      class="form-control"
+                      placeholder="Enter Phone Number"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="mail">Email:</h3>
+                    <input
+                      type="email"
+                      name="hhemail"
+                      id="city"
+                      class="form-control"
+                      placeholder="Enter Email-ID"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <h3 for="phone">Landline:</h3>
+                    <input
+                      type="tel"
+                      name="hhlandline"
+                      id="city"
+                      class="form-control"
+                      placeholder="Enter Tel Number"
+                      required
+                    />
+                  </div>
+                </div>
+                <h2>2.b Contact Details: First Contact Person</h2>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="phone">Name of First Contact Person:</h3>
+                    <input
+                      type="text"
+                      name="fcpname"
+                      id="phone"
+                      class="form-control"
+                      placeholder="Enter Person Name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <h3 for="phone">Phone:</h3>
+                    <input
+                      type="tel"
+                      name="fcpmobile"
+                      id="city"
+                      class="form-control"
+                      placeholder="Enter Phone Number"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="mail">Email:</h3>
+                    <input
+                      type="email"
+                      name="fcpemail"
+                      id="city"
+                      class="form-control"
+                      placeholder="Enter Email-ID"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <h3 for="phone">Landline:</h3>
+                    <input
+                      type="tel"
+                      name="fcplandline"
+                      id="city"
+                      class="form-control"
+                      placeholder="Enter Tel Number"
+                      required
+                    />
+                  </div>
+                </div>
+                <h2>3. Job Profile Details</h2>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="gnd">Job Offer Type</h3>
+                    <select id="gnd" name="jobOffer">
+                      <option value="M">Full Time</option>
+                      <option value="F">Internship</option>
+                      <option value="O">Full Time + Internship</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <h3 for="married">Selection Type</h3>
+                    <select id="married" name="selectionProcess">
+                      <option value="On Campus">On Campus</option>
+                      <option value="Off Campus">Off Campus</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="nation">Eligible Batches:</h3>
+                    <fieldset id="nation">
+                      <div class="checkbox">
+                        <input type="checkbox" name="eligibility" value="B24" />
+                        <label for="B24">B.Tech 2024</label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" name="eligibility" value="M24" />
+                        <label for="M24">M.Tech 2024</label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" name="eligibility" value="B25" />
+                        <label for="B25">B.Tech 2025</label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" name="eligibility" value="M25" />
+                        <label for="M25">M.Tech 2025</label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" name="eligibility" value="B26" />
+                        <label for="B26">B.Tech 2026</label>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <h3 for="nation">Eligible Branches:</h3>
+                    <fieldset id="nation">
+                      <div class="checkbox">
+                        <input type="checkbox" name="programs" value="CSE" />
+                        <label for="CSE">CSE</label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" name="programs" value="ECE" />
+                        <label for="ECE">ECE</label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" name="programs" value="MEA" />
+                        <label for="MEA">MEA</label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" name="programs" value="MAC" />
+                        <label for="MAC">MAC</label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="agp">Job Designation:</h3>
+                    <input
+                      type="text"
+                      name="jobDesignation"
+                      id="agp-name"
+                      class="form-control"
+                      placeholder="Enter Designation"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <h3 for="orcid">Place of Posting:</h3>
+                    <input
+                      type="text"
+                      name="jobLocation"
+                      id="orcid-id"
+                      class="form-control"
+                      placeholder="Enter City and Country"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h3 for="o-info">Job Description / Summary:</h3>
+                  <textarea
+                    name="jobDescription"
+                    id="o-info"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </div>
+                <h2>4. Salary Details:</h2>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="agp">Remuneration for Internship:</h3>
+                    <input
+                      type="text"
+                      name="renumeration"
+                      id="agp-name"
+                      class="form-control"
+                      placeholder="Enter Remuneration"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <h3 for="orcid">Cost to Co. (CTC):</h3>
+                    <input
+                      type="text"
+                      name="CTC"
+                      id="orcid-id"
+                      class="form-control"
+                      placeholder="Enter CTC"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="agp">Gross:</h3>
+                    <input
+                      type="text"
+                      name="gross"
+                      id="agp-name"
+                      class="form-control"
+                      placeholder="Enter Gross"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <h3 for="orcid">Take-Home:</h3>
+                    <input
+                      type="text"
+                      name="takeHome"
+                      id="orcid-id"
+                      class="form-control"
+                      placeholder="Enter Take-Home"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="agp">Bonus/Perks/Incentives:</h3>
+                    <input
+                      type="text"
+                      name="bonus"
+                      id="agp-name"
+                      class="form-control"
+                      placeholder="Enter Bonus"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <h3 for="orcid">Re-Location:</h3>
+                    <input
+                      type="text"
+                      name="relocationBonus"
+                      id="orcid-id"
+                      class="form-control"
+                      placeholder="Enter relocation"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h3 for="o-info">
+                    Bond or Contract (Specify details if any):
+                  </h3>
+                  <textarea
+                    name="contract"
+                    id="o-info"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </div>
+                <h2>5. Process:</h2>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="ogn">Mode of Selection:</h3>
+                    <select id="nation" name="spmode">
+                      <option value="Shortlist from CVs">
+                        Shortlist from CVs
+                      </option>
+                      <option value="Online Test">Online Test</option>
+                      <option value="Written Test">Written Test</option>
+                      <option value="Technical Interview">
+                        Technical Interview
+                      </option>
+                      <option value="Personal Interview">
+                        Personal Interview
+                      </option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <h3 for="dgn">Number of Rounds:</h3>
+                    <input
+                      type="text"
+                      name="sprounds"
+                      id="dgn-name"
+                      class="form-control"
+                      placeholder="Enter number of rounds"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="wrk">
+                      Eligibility Criteria (CPI cutoff on a scale of 0-10):
+                    </h3>
+                    <input
+                      type="text"
+                      name="speligibility"
+                      id="wrk-name"
+                      class="form-control"
+                      placeholder="Enter CPI Cutoff"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <h3 for="pay">
+                      Preferred Period of Visit for Recruitment:
+                    </h3>
+                    <input
+                      type="text"
+                      name="sppov"
+                      id="pay-name"
+                      class="form-control"
+                      placeholder="Enter Period"
+                      required
+                    />
+                  </div>
+                </div>
+                <h2>6. Preferance & Requirements:</h2>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="dge">Preferred Location:</h3>
+                    <select id="nation" name="preferredLocation">
+                      <option value="IIIT Bhagalpur Campus">
+                        IIIT Bhagalpur Campus
+                      </option>
+                      <option value="NIT Patna">NIT Patna</option>
+                      <option value="IIT Guwahati">IIT Guwahati</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <h3 for="branch">Number of offers (expected):</h3>
+                    <input
+                      type="text"
+                      name="offers"
+                      id="branch"
+                      class="form-control"
+                      placeholder="Enter of expected offers"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row-div">
+                  <div class="form-group">
+                    <h3 for="college">
+                      Number of members visiting IIIT Bhagalpur campus:
+                    </h3>
+                    <input
+                      type="text"
+                      name="ldmembers"
+                      id="college"
+                      class="form-control"
+                      placeholder="Enter number of members visiting IIIT Bhagalpur campus"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <h3 for="year">
+                      No. of rooms required for the selection process:
+                    </h3>
+                    <input
+                      type="text"
+                      name="ldrooms"
+                      id="year"
+                      class="form-control"
+                      placeholder="Enter number of days"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <h3 for="year">No. of days of Stay:</h3>
+                    <input
+                      type="text"
+                      name="lddays"
+                      id="year"
+                      class="form-control"
+                      placeholder="Enter number of days"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h3 for="o-info">Other requirements if any:</h3>
+                  <textarea
+                    name="otherRequirements"
+                    id="o-info"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="new_btn submit-btn">
+                <button type="submit" class="btn">Done</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="job-content-3">
+          <div class="heading">
+            <h1>Submition Details</h1>
+          </div>
+          <div class="preview">
+            <p>
+              By submitting this document, You are confirming that all the
+              details provided by you are correct and accurate to the best of
+              your knowledge. You understand that any false or misleading
+              information may result in rejection.
+            </p>
+          </div>
+          <div class="new_btn submit-btn">
+            <button type="submit" class="btn">Final Submit</button>
+          </div>
+        </div>
+      </div>
     </section>
-
-
-</body>
-
+  </body>
 </html>

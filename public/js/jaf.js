@@ -1,4 +1,4 @@
-document.forms["recruit"].onsubmit((e) => {
+document.forms["recruit"].addEventListener("submit", (e) => {
   e.preventDefault();
   fetch("/api/admin/jafRecruit", {
     method: "POST",

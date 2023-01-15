@@ -46,6 +46,7 @@ var admin = mongoose.Schema({
     takeHome: String,
     bonus: String,
     contract: String,
+    relocationBonus: String,
   },
   salary: {
     renumeration: String,
