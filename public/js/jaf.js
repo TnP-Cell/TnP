@@ -2,7 +2,7 @@ document.forms["recruit"].addEventListener("submit", (e) => {
   e.preventDefault();
   fetch("/api/admin/jafRecruit", {
     method: "POST",
-    body: new URLSearchParams(e.target),
+    body: new URLSearchParams(new FormData(e.target)),
   })
     .then((res) => res.json())
     .then((data) => {

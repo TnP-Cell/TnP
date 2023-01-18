@@ -6,6 +6,7 @@ const jwtverify = require("../middleware/jwtVerfication");
 const adminModel = require("../models/adminModel");
 const carouselImages = require("../models/carouselImg");
 const upload = require("../middleware/fileUpload");
+const jafModel = require("../models/jafModel");
 const path = require("path");
 const fs = require("fs");
 
@@ -95,6 +96,115 @@ admin.post("/carouselUpload", upload.single("image"), jwtverify, (req, res) => {
     });
     res.status(200).json({ status: 0 });
   });
+});
+
+admin.post("/jafRecruit", (req, res) => {
+  var date = new Date();
+  var dof =
+    date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+  var orgName = req.body.orgName;
+  var website = req.body.website;
+  var postalAddress = req.body.postalAddress;
+  var category = req.body.category;
+  var industrySector = req.body.industrySector;
+  var aboutOrg = req.body.aboutOrg;
+  var hhname = req.body.hhname;
+  var hhmobile = req.body.hhmobile;
+  var hhemail = req.body.hhemail;
+  var hhlandline = req.body.hhlandline;
+  var fcpname = req.body.fcpname;
+  var fcpmobile = req.body.fcpmobile;
+  var fcpemail = req.body.fcpemail;
+  var fcplandline = req.body.fcplandline;
+  var jobOffer = req.body.jobOffer;
+  var selectionProcess = req.body.selectionProcess;
+  var eligibility = req.body.eligibility;
+  var programs = req.body.programs;
+  var jobDesignation = req.body.jobDesignation;
+  var jobLocation = req.body.jobLocation;
+  var jobDescription = req.body.jobDescription;
+  var renumeration = req.body.renumeration;
+  var ctc = req.body.ctc;
+  var gross = req.body.gross;
+  var takeHome = req.body.takeHome;
+  var bonus = req.body.bonus;
+  var relocationBonus = req.body.relocationBonus;
+  var contract = req.body.contract;
+  var spmode = req.body.spmode;
+  var sprounds = req.body.sprounds;
+  var speligibility = req.body.speligibility;
+  var sppov = req.body.sppov;
+  var preferredLocation = req.body.preferredLocation;
+  var offers = req.body.offers;
+  var ldmembers = req.body.ldmembers;
+  var ldrooms = req.body.ldrooms;
+  var otherRequirements = req.body.otherRequirements;
+
+  var data = new jafModel({
+    dof: dof,
+    orgName: orgName,
+    website: website,
+    aboutOrg: aboutOrg,
+    postalAddress: postalAddress,
+    category: category,
+    industrySector: industrySector,
+    contact: {
+      headHR: {
+        name: hhname,
+        mobile: hhmobile,
+        email: hhemail,
+        landline: hhlandline,
+      },
+      firstContactPerson: {
+        name: fcpname,
+        mobile: fcpmobile,
+        email: fcpemail,
+        landline: fcplandline,
+      },
+    },
+    jobProfile: {
+      jobOffer: jobOffer,
+    },
+    selectionProcess: {
+      selectionProcess: selectionProcess,
+      elgibleBatches: eligibility,
+    },
+    programs: {
+      bTech: programs,
+    },
+    bTech: {
+      jobDesignation: jobDesignation,
+      jobLocation: jobLocation,
+      jobDescription: jobDescription,
+      CTC: ctc,
+      gross: gross,
+      takeHome: takeHome,
+      bonus: bonus,
+      relocationBonus: relocationBonus,
+      contract: contract,
+    },
+    salary: {
+      renumeration: renumeration,
+    },
+    selectionProcess: {
+      mode: spmode,
+      rounds: sprounds,
+      eligibility: speligibility,
+      pov: sppov,
+      preferredLocation: preferredLocation,
+      offers: offers,
+    },
+    logisticalDetails: {
+      members: ldmembers,
+      rooms: ldrooms,
+    },
+    otherRequirements: otherRequirements,
+  });
+
+  data.save((err,result)=>{
+    if(err) throw err;
+    res.status(200).json({status:0});
+  })
 });
 
 module.exports = admin;

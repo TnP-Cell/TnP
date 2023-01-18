@@ -21,21 +21,16 @@ var admin = mongoose.Schema({
       mobile: String,
       landline: String,
     },
-    secondContactPerson: {
-      name: String,
-      email: String,
-      mobile: String,
-      landline: String,
-    },
   },
   jobProfile: {
     jobOffer: String,
   },
-  selectionPRocess: {
+  selectionProcess: {
     selectionProcess: String,
+    eligibleBatches: Array,
   },
   programs: {
-    bTech: String,
+    bTech: Array,
   },
   bTech: {
     jobDesignation: String,
