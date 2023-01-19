@@ -164,10 +164,8 @@ admin.post("/jafRecruit", (req, res) => {
     },
     jobProfile: {
       jobOffer: jobOffer,
-    },
-    selectionProcess: {
       selectionProcess: selectionProcess,
-      elgibleBatches: eligibility,
+      eligibleBatches: eligibility,
     },
     programs: {
       bTech: programs,
@@ -202,7 +200,7 @@ admin.post("/jafRecruit", (req, res) => {
   });
 
   data.save((err,result)=>{
-    if(err) throw err;
+    if(err) return res.status(400).json({status:-1});
     res.status(200).json({status:0});
   })
 });

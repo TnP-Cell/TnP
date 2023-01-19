@@ -24,8 +24,6 @@ var admin = mongoose.Schema({
   },
   jobProfile: {
     jobOffer: String,
-  },
-  selectionProcess: {
     selectionProcess: String,
     eligibleBatches: Array,
   },
