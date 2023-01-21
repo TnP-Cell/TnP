@@ -47,9 +47,9 @@ admin.post("/adminRegister", (req, res) => {
   var password = req.body.password;
   var post = req.body.post;
   bcrypt.genSalt(10, (err, Salt) => {
-    if (err) res.status(400).json({ status: -1 });
+    if (err) return res.status(400).json({ status: -1 });
     bcrypt.hash(password, Salt, (err, hash) => {
-      if (err) res.status(400).json({ status: -1 });
+      if (err) return res.status(400).json({ status: -1 });
       var adminData = new adminModel({
         name: name,
         username: username,
@@ -57,7 +57,7 @@ admin.post("/adminRegister", (req, res) => {
         post: post,
       });
       adminData.save((err, result) => {
-        if (err) res.status(400).json({ status: -1 });
+        if (err) return res.status(400).json({ status: -1 });
         res.status(200).json({ status: 0 });
       });
     });
