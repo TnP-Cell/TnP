@@ -983,6 +983,43 @@ button:hover {
   height: auto;
 }
 
+/* Student Activities */
+.activities {
+  width: 100%;
+  padding: 3%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.activities .graph {
+  width: calc(33% - 10px);
+  display: flex;
+  justify-content: center;
+}
+
+.activities .detail-timeline {
+  width: calc(66% - 10px);
+}
+
+.timeline-item{
+  margin: 2% auto;
+}
+.timeline-item .name{
+  margin-bottom: 1%;
+}
+
+.students-acheiv{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4e4e4e;
+  padding: 20px 0;
+}
+
+.graph img{
+  width: 300px;
+}
+
 .contact-section {
   padding: 20px 0;
 }
@@ -1581,19 +1618,6 @@ button:hover {
   .heading h1 {
     font-size: 26px;
   }
-}
-
-.activities {
-  width: 100%;
-  padding: 3%;
-}
-
-.activities .graph {
-  width: 50%;
-}
-
-.activities .detail-timeline {
-  width: 50%;
 }
 
 .top-bar {
