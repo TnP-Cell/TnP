@@ -1003,21 +1003,90 @@ button:hover {
   width: calc(66% - 10px);
 }
 
-.timeline-item{
+.timeline-item {
   margin: 2% auto;
 }
-.timeline-item .name{
+.timeline-item .name {
   margin-bottom: 1%;
 }
 
-.students-acheiv{
+.students-acheiv {
   font-family: Arial, Helvetica, sans-serif;
   color: #4e4e4e;
   padding: 20px 0;
 }
 
-.graph img{
+.graph img {
   width: 300px;
+}
+
+.top-bar {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.bottom-bar {
+  height: 30px;
+  width: 100%;
+  border-radius: 60px;
+  background-color: #ffff;
+  display: flex;
+}
+
+.bottom-bar div {
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-bar div:nth-child(1) {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.bottom-bar div:last-child {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.bottom-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2%;
+}
+
+.color-panel {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.color-panel .color-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.color-detail .color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid none;
+  margin-right: 2%;
+}
+
+.know-more {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(0, 77, 107);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .contact-section {
@@ -1406,6 +1475,27 @@ button:hover {
     font-size: 18px;
   }
 
+  .activities {
+    flex-direction: column;
+  }
+
+  .activities .graph,
+  .activities .detail-timeline {
+    width: 100%;
+  }
+
+  .bottom-bar div span {
+    font-size: 10px;
+  }
+
+  .bottom-strip {
+    flex-direction: column;
+  }
+
+  .color-panel {
+    display: none;
+  }
+
   .about .row-down {
     flex-direction: column-reverse;
   }
@@ -1618,37 +1708,4 @@ button:hover {
   .heading h1 {
     font-size: 26px;
   }
-}
-
-.top-bar {
-  margin-top: 10px;
-  width: 100%;
-}
-
-.bottom-bar {
-  height: 30px;
-  width: 100%;
-  border-radius: 60px;
-  background-color: #ffff;
-  display: flex;
-}
-
-.bottom-bar div {
-  height: 100%;
-  text-align: center;
-  color: #fff;
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bottom-bar div:nth-child(1) {
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-}
-
-.bottom-bar div:last-child {
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
 }
