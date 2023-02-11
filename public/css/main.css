@@ -1,3 +1,17 @@
+/* .users,.card1-new,.announcement .container {
+  background: rgb(255, 105, 35);
+  background: linear-gradient(
+    150deg,
+    rgba(255, 105, 35, 1) 0%,
+    rgba(246, 199, 177, 1) 24%,
+    rgba(254, 250, 248, 1) 39%,
+    rgba(255, 255, 255, 1) 45%,
+    rgba(246, 251, 248, 1) 52%,
+    rgba(193, 230, 204, 1) 66%,
+    rgba(42, 238, 103, 1) 90%
+  );
+} */
+
 * {
   margin: 0;
   padding: 0;
