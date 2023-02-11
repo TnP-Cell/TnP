@@ -86,7 +86,7 @@ profile.post("/register", multiUpload, async (req, res) => {
   });
 
   await prof.save((err, result) => {
-    if (err) res.status(403).json({ status: -1 });
+    if (err) return res.status(403).json({ status: -1 });
     console.log("Profile Uploaded");
     fs.unlinkSync(
       path.join(__dirname + "/uploads/" + req.files.profilePic[0].filename)

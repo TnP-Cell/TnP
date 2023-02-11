@@ -9,13 +9,13 @@ const cors = require("cors");
 const app = express();
 connect();
 
-app.set('views', './views');
+app.set("views", "./views");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 // console.log(path.resolve(__dirname, '../public/assets/fevicon.svg'));
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(bodyParser.json());
 // app.use("/", require("./routes/pages"));
 // app.get("", (req, res) => {
 //   res.render("index");
