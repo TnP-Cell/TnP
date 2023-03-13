@@ -13,11 +13,11 @@ var buttons = document.querySelectorAll(".button");
 var activeButton = document.querySelector(".active-button");
 
 for (var i = 0; i < mainContainer.length; i++) {
-  if (i == 1) continue;
+  if (i == 0) continue;
   mainContainer[i].style.display = "none";
 }
 for (var i = 0; i < mainContainerMb.length; i++) {
-  if (i == 1) continue;
+  if (i == 0) continue;
   mainContainerMb[i].style.display = "none";
 }
 
