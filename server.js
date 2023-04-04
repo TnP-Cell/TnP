@@ -1,7 +1,7 @@
 const express = require("express");
 // var https = require("https");
-var path = require("path");
-var fs = require("fs");
+// var path = require("path");
+// var fs = require("fs");
 require("dotenv").config();
 const bodyParser = require("body-parser");
 const connect = require("./backend/db");
@@ -33,7 +33,7 @@ app.use("/api/events", require("./backend/routes/events"));
 // };
 
 var port = process.env.PORT || 5000;
-app.listen(port, process.env.IP, () => {
+app.listen(port, () => {
   console.log("Server is running at port: " + port);
 });
 // https.createServer(options, app).listen(port, () => {

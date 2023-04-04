@@ -323,6 +323,14 @@
                     <h3 for="nation">Eligible Batches:</h3>
                     <fieldset id="nation">
                       <div class="checkbox">
+                        <input type="checkbox" name="eligibility" value="B26" />
+                        <label for="B23">B.Tech 2023</label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" name="eligibility" value="B26" />
+                        <label for="M23">M.Tech 2023</label>
+                      </div>
+                      <div class="checkbox">
                         <input type="checkbox" id="B24" name="eligibility" value="B24" />
                         <label for="B24">B.Tech 2024</label>
                       </div>
@@ -338,26 +346,22 @@
                         <input type="checkbox" id="M25" name="eligibility" value="M25" />
                         <label for="M25">M.Tech 2025</label>
                       </div>
-                      <!-- <div class="checkbox">
-                        <input type="checkbox" name="eligibility" value="B26" />
-                        <label for="B26">B.Tech 2026</label>
-                      </div> -->
                     </fieldset>
                   </div>
                   <div class="form-group">
                     <h3 for="nation">Eligible Branches:</h3>
                     <fieldset id="nation">
                       <div class="checkbox">
-                        <input type="checkbox" name="programs" value="CSE" />
+                        <input type="checkbox" name="branches" value="CSE" />
                         <label for="CSE">CSE (Computer Science & Engineering)</label>
                       </div>
                       <div class="checkbox">
-                        <input type="checkbox" name="programs" value="ECE" />
+                        <input type="checkbox" name="branches" value="ECE" />
                         <label for="ECE">ECE (Electronics & Communication Enginnering)</label>
                       </div>
                       <div class="checkbox">
-                        <input type="checkbox" name="programs" value="MEA" />
-                        <label for="MEA">MEA (Mechatronics Engineering)</label>
+                        <input type="checkbox" name="branches" value="MEA" />
+                        <label for="MEA">MEA (Mechatronics & Automation Engineering)</label>
                       </div>
                       <!-- <div class="checkbox">
                         <input type="checkbox" name="programs" value="MAC" />
@@ -571,8 +575,7 @@
                       <option value="IIIT Bhagalpur Campus">
                         IIIT Bhagalpur Campus
                       </option>
-                      <option value="NIT Patna">NIT Patna</option>
-                      <option value="IIT Guwahati">IIT Guwahati</option>
+                      <option value="Online">Online/Remote</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -636,8 +639,8 @@
                   ></textarea>
                 </div>
               </div>
-              <div class="new_btn submit-btn">
-                <button type="submit" class="btn">Done</button>
+              <div class="new_btn-1 submit-btn">
+                <button type="submit" class="btn">Save</button>
               </div>
             </form>
           </div>

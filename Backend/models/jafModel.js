@@ -30,6 +30,9 @@ var admin = mongoose.Schema({
   programs: {
     bTech: Array,
   },
+  branches: {
+    bTech: Array,
+  },
   bTech: {
     jobDesignation: String,
     jobDescription: String,
@@ -45,7 +48,6 @@ var admin = mongoose.Schema({
     renumeration: String,
   },
   selectionProcess: {
-    mode: String,
     rounds: String,
     eligibility: String,
     pov: String,
