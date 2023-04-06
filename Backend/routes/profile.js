@@ -7,38 +7,46 @@ const jwt = require("jsonwebtoken");
 const jwtverify = require("../middleware/jwtVerfication");
 const upload = require("../middleware/fileUpload");
 
-profile.post("/login", (req, res) => {
+profile.post("/login", async (req, res) => {
   var username = req.body.username;
   var password = req.body.password;
-  studProf.findOne({ email: username }, (err, result) => {
-    if (err) res.status(400).json({ status: -1 });
-    if (result.password === password) {
-      var data = { id: result._id };
-      var auth_token = jwt.sign(data, process.env.JWT_TOKEN);
-      res.status(200).json({ status: 0, auth_token });
-    } else res.status(400).json({ status: -1 });
-  });
+  await studProf
+    .findOne({ email: username })
+    .then((result) => {
+      if (result.password === password) {
+        var data = { id: result._id };
+        var auth_token = jwt.sign(data, process.env.JWT_TOKEN);
+        return res.status(200).json({ status: 0, auth_token });
+      } else return res.status(401).json({ status: -1 });
+    })
+    .catch((err) => {
+      return res.status(400).json({ status: -1, error: err.message });
+    });
 });
 
-profile.post("/showProfile", jwtverify, (req, res) => {
+profile.post("/showProfile", jwtverify, async (req, res) => {
   var id = req.userid;
   // console.log(id)
-  studProf.findOne({ _id: id }, (err, result) => {
-    if (err) res.status(400).json({ status: -1 });
-    var data = {
-      email: result.email,
-      name: result.name,
-      branch: result.branch,
-      roll: result.roll,
-      cgpa: result.cgpa,
-      phone: result.phone,
-      linkeidn: result.linkedin,
-      github: result.github,
-      profilePic: result.profilePic,
-      resume: result.resume,
-    };
-    res.status(200).json({ status: 0, data });
-  });
+  await studProf
+    .findOne({ _id: id })
+    .then((result) => {
+      var data = {
+        email: result.email,
+        name: result.name,
+        branch: result.branch,
+        roll: result.roll,
+        cgpa: result.cgpa,
+        phone: result.phone,
+        linkeidn: result.linkedin,
+        github: result.github,
+        profilePic: result.profilePic,
+        resume: result.resume,
+      };
+      return res.status(200).json({ status: 0, data });
+    })
+    .catch((err) => {
+      return res.status(400).json({ status: -1, error: err.message });
+    });
   // res.status(400).json({ status: -1 });
 });
 
@@ -85,17 +93,21 @@ profile.post("/register", multiUpload, async (req, res) => {
     },
   });
 
-  await prof.save((err, result) => {
-    if (err) return res.status(403).json({ status: -1 });
-    console.log("Profile Uploaded");
-    fs.unlinkSync(
-      path.join(__dirname + "/uploads/" + req.files.profilePic[0].filename)
-    );
-    fs.unlinkSync(
-      path.join(__dirname + "/uploads/" + req.files.resume[0].filename)
-    );
-  });
-  res.status(200).json({ status: 0 });
+  await prof
+    .save()
+    .then((result) => {
+      console.log("Profile Uploaded");
+      fs.unlinkSync(
+        path.join(__dirname + "/uploads/" + req.files.profilePic[0].filename)
+      );
+      fs.unlinkSync(
+        path.join(__dirname + "/uploads/" + req.files.resume[0].filename)
+      );
+    })
+    .catch((err) => {
+      return res.status(400).json({ status: -1, error: err.message });
+    });
+  return res.status(200).json({ status: 0 });
 });
 
 module.exports = profile;

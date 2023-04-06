@@ -194,7 +194,7 @@ const displayEvents = (data) => {
 function deleteEvent(id) {
   // console.log(id);
   fetch(`/api/events/deleteEvents`, {
-    method: "POST",
+    method: "DELETE",
     body: new URLSearchParams({ id: id }),
   })
     .then((res) => res.json())

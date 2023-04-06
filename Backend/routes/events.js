@@ -4,42 +4,58 @@ const eventsModel = require("../models/eventsModel");
 const jwtverify = require("../middleware/jwtVerfication");
 const adminModel = require("../models/adminModel");
 
-events.post("/eventsUpload", jwtverify, (req, res) => {
+events.post("/eventsUpload", jwtverify, async (req, res) => {
   var id = req.userid;
   var desc = req.body.desc;
   var link = req.body.link;
-  adminModel.findOne({ _id: id }, (err, result) => {
-    if (err) res.status(400).json({ status: -1 });
-    var d = new Date();
-    var eventsAdd = new eventsModel({
-      name: result.name,
-      events: {
-        desc: desc,
-        link: link,
-      },
-      date: d.getDate(),
-      month: d.getMonth(),
+  await adminModel
+    .findOne({ _id: id })
+    .then(async (result) => {
+      var d = new Date();
+      var eventsAdd = new eventsModel({
+        name: result.name,
+        events: {
+          desc: desc,
+          link: link,
+        },
+        date: d.getDate(),
+        month: d.getMonth(),
+      });
+      await eventsAdd
+        .save()
+        .then((result) => {
+          return res.status(200).json({ status: 0 });
+        })
+        .catch((err) => {
+          return res.status(400).json({ status: -1, error: err.message });
+        });
+    })
+    .catch((err) => {
+      return res.status(400).json({ status: -1, error: err.message });
     });
-    eventsAdd.save((err, result) => {
-      if (err) res.status(400).json({ status: -1 });
-      res.status(200).json({ status: 0 });
-    });
-  });
 });
 
-events.post("/eventsFetch", (req, res) => {
-  eventsModel.find({}, (err, result) => {
-    if (err) res.status(400).json({ status: -1 });
-    res.status(200).json({ status: 0, data: result });
-  });
+events.post("/eventsFetch", async (req, res) => {
+  await eventsModel
+    .find({})
+    .then((result) => {
+      res.status(200).json({ status: 0, data: result });
+    })
+    .catch((err) => {
+      return res.status(400).json({ status: -1, error: err.message });
+    });
 });
 
-events.delete("/deleteEvents", (req, res) => {
+events.delete("/deleteEvents", async (req, res) => {
   var eventsId = req.body.id;
-  eventsModel.deleteOne({_id:eventsId},(err,result)=>{
-    if(err) return res.status(400).json({status:-1});
-    res.status(200).json({status:0});
-  })
+  await eventsModel
+    .deleteOne({ _id: eventsId })
+    .then((result) => {
+      return res.status(200).json({ status: 0 });
+    })
+    .catch((err) => {
+      return res.status(400).json({ status: -1, error: err.message });
+    });
 });
 
 module.exports = events;
