@@ -1,10 +1,10 @@
-const express = require("express");
-const events = express.Router();
-const eventsModel = require("../models/eventsModel");
-const jwtverify = require("../middleware/jwtVerfication");
-const adminModel = require("../models/adminModel");
+import express from "express";
+const news = express.Router();
+import newsModel from "../models/newsModel.mjs";
+import jwtverify from "../middleware/jwtVerfication.mjs";
+import adminModel from "../models/adminModel.mjs";
 
-events.post("/eventsUpload", jwtverify, async (req, res) => {
+news.post("/newsUpload", jwtverify, async (req, res) => {
   var id = req.userid;
   var desc = req.body.desc;
   var link = req.body.link;
@@ -12,19 +12,20 @@ events.post("/eventsUpload", jwtverify, async (req, res) => {
     .findOne({ _id: id })
     .then(async (result) => {
       var d = new Date();
-      var eventsAdd = new eventsModel({
+      var newsAdd = new newsModel({
         name: result.name,
-        events: {
+        news: {
           desc: desc,
           link: link,
         },
         date: d.getDate(),
         month: d.getMonth(),
       });
-      await eventsAdd
+      await newsAdd
         .save()
         .then((result) => {
-          return res.status(200).json({ status: 0 });
+          if (err) res.status(400).json({ status: -1 });
+          res.status(200).json({ status: 0 });
         })
         .catch((err) => {
           return res.status(400).json({ status: -1, error: err.message });
@@ -35,21 +36,21 @@ events.post("/eventsUpload", jwtverify, async (req, res) => {
     });
 });
 
-events.post("/eventsFetch", async (req, res) => {
-  await eventsModel
+news.post("/newsFetch", async (req, res) => {
+  await newsModel
     .find({})
     .then((result) => {
-      res.status(200).json({ status: 0, data: result });
+      return res.status(200).json({ status: 0, data: result });
     })
     .catch((err) => {
       return res.status(400).json({ status: -1, error: err.message });
     });
 });
 
-events.delete("/deleteEvents", async (req, res) => {
-  var eventsId = req.body.id;
-  await eventsModel
-    .deleteOne({ _id: eventsId })
+news.delete("/deleteNews", async (req, res) => {
+  var newsId = req.body.id;
+  await newsModel
+    .deleteOne({ _id: newsId })
     .then((result) => {
       return res.status(200).json({ status: 0 });
     })
@@ -58,4 +59,4 @@ events.delete("/deleteEvents", async (req, res) => {
     });
 });
 
-module.exports = events;
+export default news;

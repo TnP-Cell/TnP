@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 var admin = mongoose.Schema({
   dof: String,
@@ -62,4 +62,6 @@ var admin = mongoose.Schema({
   otherRequirements: String,
 });
 
-module.exports = mongoose.model("jafDetails", admin);
+let jafModel = mongoose.model("jafDetails", admin);
+
+export default jafModel;

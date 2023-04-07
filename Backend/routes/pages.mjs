@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 const page = express.Router();
 
 page.get("/", (req, res) => {
@@ -24,4 +24,4 @@ page.get("/:page", (req, res) => {
   else if (page == "resume") res.render("resume-builder", { check: false });
 });
 
-module.exports = page;
+export default page;

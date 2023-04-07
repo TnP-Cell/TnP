@@ -223,12 +223,12 @@ const fetchAdminData = () => {
   })
     .then((res) => res.json())
     .then((data) => {
-      // console.log(data.data);
+      console.log(data);
       if (data.status == 0) {
         displayData(data.data);
       } else {
         localStorage.removeItem("adminToken");
-        window.location.href = "./admin-login.html";
+        window.location.href = "/admin";
         alert("Status not 0");
       }
     })
@@ -267,7 +267,7 @@ const fetchEventsData = () => {
     method: "POST",
     headers: {
       "content-type": "application/json",
-      auth_token: localStorage.getItem("authToken"),
+      auth_token: localStorage.getItem("adminToken"),
     },
   })
     .then((res) => res.json())

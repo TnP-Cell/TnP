@@ -1,16 +1,18 @@
-const express = require("express");
-const fs = require("fs");
-const path = require("path");
+import express from "express";
+import fs from "fs";
+import path from "path";
 const profile = express.Router();
-const studProf = require("../models/studentProfile");
-const jwt = require("jsonwebtoken");
-const jwtverify = require("../middleware/jwtVerfication");
-const upload = require("../middleware/fileUpload");
+import studentProfile from "../models/studentProfile.mjs";
+import jwt from "jsonwebtoken";
+import jwtverify from "../middleware/jwtVerfication.mjs";
+import upload from "../middleware/fileUpload.mjs";
+import dotenv from "dotenv";
+dotenv.config();
 
 profile.post("/login", async (req, res) => {
   var username = req.body.username;
   var password = req.body.password;
-  await studProf
+  await studentProfile
     .findOne({ email: username })
     .then((result) => {
       if (result.password === password) {
@@ -27,7 +29,7 @@ profile.post("/login", async (req, res) => {
 profile.post("/showProfile", jwtverify, async (req, res) => {
   var id = req.userid;
   // console.log(id)
-  await studProf
+  await studentProfile
     .findOne({ _id: id })
     .then((result) => {
       var data = {
@@ -69,7 +71,7 @@ profile.post("/register", multiUpload, async (req, res) => {
   // console.log(req.files.profilePic[0].filename);
   // console.log(req.files.resume[0].filename);
 
-  var prof = new studProf({
+  var prof = new studentProfile({
     name: name,
     email: email,
     password: password,
@@ -110,4 +112,4 @@ profile.post("/register", multiUpload, async (req, res) => {
   return res.status(200).json({ status: 0 });
 });
 
-module.exports = profile;
+export default profile;

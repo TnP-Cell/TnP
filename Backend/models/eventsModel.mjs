@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 var events = mongoose.Schema({
   name: String,
@@ -10,4 +10,6 @@ var events = mongoose.Schema({
   month: String,
 });
 
-module.exports = mongoose.model("eventsDetails", events);
+let eventsModel = mongoose.model("eventsDetails", events);
+
+export default eventsModel;

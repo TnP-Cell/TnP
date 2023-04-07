@@ -1,9 +1,10 @@
-var jwt = require("jsonwebtoken");
-require("dotenv").config();
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+dotenv.config();
 
 const jwtverify = async (req, res, next) => {
   try {
-    token = req.headers.auth_token;
+    let token = req.headers.auth_token;
     var decoded = jwt.verify(token, process.env.JWT_TOKEN);
     req.userid = decoded.id;
     next();
@@ -12,4 +13,4 @@ const jwtverify = async (req, res, next) => {
   }
 };
 
-module.exports = jwtverify;
+export default jwtverify;

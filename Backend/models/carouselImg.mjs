@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const images = mongoose.Schema({
   name: String,
@@ -9,4 +9,6 @@ const images = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("carouselImages", images);
+let carouselImages = mongoose.model("carouselImages", images);
+
+export default carouselImages;

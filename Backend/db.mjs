@@ -1,5 +1,6 @@
-const mongoose = require("mongoose");
-
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 // database url
 // const url = "mongodb://localhost:27017/tnp";
 const url = process.env.DB_URL;
@@ -16,8 +17,8 @@ const connect = async () => {
         console.log("Database Connected");
       });
   } catch (error) {
-    console.log("Data Base is not connected");
+    console.log("Database is not connected");
   }
 };
 
-module.exports = connect;
+export default connect;

@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const studProf = mongoose.Schema({
   email: String,
@@ -20,4 +20,6 @@ const studProf = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("studentDetails", studProf);
+let studentProfile = mongoose.model("studentDetails", studProf);
+
+export default studentProfile;
