@@ -235,10 +235,11 @@ admin.post("/jafRecruit", async (req, res) => {
   await data
     .save()
     .then((result) => {
-      fetch(`http://localhost:4000/sendMail`, {
+      console.log(data);
+      fetch(`https://tnp-mailer.vercel.app/sendMail`, {
         method: "POST",
         headers: {
-          Accept: "application.json",
+          Accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
