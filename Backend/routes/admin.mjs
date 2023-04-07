@@ -33,9 +33,8 @@ admin.post("/adminLogin", async (req, res) => {
     });
 });
 
-admin.post("/adminShow",jwtverify, async (req, res) => {
+admin.post("/adminShow", jwtverify, async (req, res) => {
   var id = req.userid;
-  // console.log(id);
   await adminModel
     .findOne({ _id: id })
     .then((result) => {
@@ -235,13 +234,14 @@ admin.post("/jafRecruit", async (req, res) => {
 
   await data
     .save()
-    .then(async (result) => {
-      await fetch(``, {
+    .then((result) => {
+      fetch(`http://localhost:4000/sendMail`, {
         method: "POST",
         headers: {
+          Accept: "application.json",
           "Content-Type": "application/json",
-          body: JSON.stringify(data),
         },
+        body: JSON.stringify(data),
       })
         .then((res) => res.json())
         .then((data) => {
