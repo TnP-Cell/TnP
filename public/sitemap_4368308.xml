@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+       <loc>https://tnp.iiitbh.ac.in/</loc>
+       <lastmod>2022-08-15T21:40:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://tnp.iiitbh.ac.in/institute</loc>
+       <lastmod>2022-08-15T21:40:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://tnp.iiitbh.ac.in/forRecruiters</loc>
+       <lastmod>2022-08-15T21:40:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://tnp.iiitbh.ac.in/contact</loc>
+       <lastmod>2022-08-15T21:40:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://tnp.iiitbh.ac.in/visitors</loc>
+       <lastmod>2022-08-15T21:40:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://tnp.iiitbh.ac.in/directorPage</loc>
+       <lastmod>2022-08-15T21:40:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://tnp.iiitbh.ac.in/contactPage</loc>
+       <lastmod>2022-08-15T21:40:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://tnp.iiitbh.ac.in/jaf</loc>
+       <lastmod>2022-08-15T21:40:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://tnp.iiitbh.ac.in/gallery/</loc>
+       <lastmod>2022-08-15T21:40:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.6400</priority>
+  </url>
+</urlset>

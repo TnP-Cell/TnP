@@ -336,7 +336,6 @@ img {
 }
 
 .response-table {
-  background-color: #ffff;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -344,10 +343,17 @@ img {
   width: 100%;
 }
 
+#show-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding: 5px;
 }
 
 .col {
@@ -360,4 +366,105 @@ img {
   width: 100%;
   margin: 0 2px 0 2px;
   text-align: center;
+  background-color: #fff;
+}
+
+.col a,
+.col span {
+  font-size: 16px;
+  color: #000;
+}
+
+.col a {
+  color: rgb(83, 69, 237);
+}
+
+.col button {
+  background-color: blue;
+  color: #fff;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  padding: 3%;
+  width: 90%;
+  border-radius: 15px;
+}
+
+.col button:active {
+  transform: scale(0.8);
+}
+
+.overlay {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #434343a9;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  padding: 2% 3%;
+  display: none;
+}
+
+.recruiters-details {
+  width: 90%;
+  border: 2px solid #e7a849;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0 5px 0;
+  background-color: #fff;
+}
+
+.recruiters-details .fields-head {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  padding: 1%;
+}
+
+.recruiters-details .fields {
+  display: flex;
+  width: 90%;
+  padding: 1%;
+}
+.recruiters-details .fields a,
+.recruiters-details .fields span {
+  font-size: 14px;
+  margin: 0 10px 0 10px;
+  text-align: justify;
+}
+
+.recruiters-details .fields a {
+  color: rgb(83, 69, 237);
+}
+
+#close-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 3%;
+  width: 100%;
+}
+
+.close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  padding: 1%;
+  outline: none;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.close-button:hover {
+  transform: scale(1.2);
 }

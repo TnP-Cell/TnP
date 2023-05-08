@@ -19,12 +19,16 @@ admin.post("/adminLogin", async (req, res) => {
     .then((result) => {
       if (result) {
         bcrypt.compare(password, result.password, (err, match) => {
-          if (err) return res.status(400).json({ status: -1 });
+          if (err)
+            return res.status(400).json({ status: -1, error: err.message });
           if (match) {
             var data = { id: result._id };
             var auth_token = jwt.sign(data, process.env.JWT_TOKEN);
             return res.status(200).json({ status: 0, auth_token });
-          } else return res.status(401).json({ status: -1 });
+          } else
+            return res
+              .status(401)
+              .json({ status: -1, error: "Password Not Matched" });
         });
       } else return res.status(401).json({ status: -1 });
     })
@@ -45,7 +49,7 @@ admin.post("/adminShow", jwtverify, async (req, res) => {
       return res.status(200).json({ status: 0, data });
     })
     .catch((err) => {
-      return res.status(400).json({ status: -1 });
+      return res.status(400).json({ status: -1, error: err.message });
     });
 });
 
@@ -235,7 +239,7 @@ admin.post("/jafRecruit", async (req, res) => {
   await data
     .save()
     .then((result) => {
-      console.log(data);
+      // console.log(data);
       fetch(`https://tnp-mailer.vercel.app/sendMail`, {
         method: "POST",
         headers: {
@@ -262,6 +266,18 @@ admin.post("/jafView", async (req, res) => {
     .find({})
     .then((result) => {
       return res.json({ status: 0, data: result });
+    })
+    .catch((err) => {
+      return res.status(400).json({ status: -1, error: err.message });
+    });
+});
+
+admin.get("/jafDetails", async (req, res) => {
+  var id = req.query.id;
+  await jafModel
+    .findOne({ _id: id })
+    .then((result) => {
+      return res.status(200).json({ status: 0, data: result });
     })
     .catch((err) => {
       return res.status(400).json({ status: -1, error: err.message });

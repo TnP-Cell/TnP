@@ -12,6 +12,8 @@ var eventsImg = document.querySelector("#events-img");
 var backBtn = document.querySelector("#b-btn");
 var imgUpd = document.querySelector("#img-upd");
 var imgShow = document.querySelector("#img-show");
+var detailsShow = document.querySelector("#show-details");
+var recruiterDetails = document.querySelector(".recruiters-details");
 
 eventsAdd.style.display = "none";
 
@@ -209,6 +211,232 @@ function deleteEvent(id) {
     });
 }
 
+const showArray = (data) => {
+  let html = ``;
+  data.map((e) => {
+    html += `${e},`;
+  });
+  return html.slice(0, -1);
+};
+
+const displayRecruiterData = (data) => {
+  // console.log(data[0]._id);
+  let html = ``;
+  for (let i = 0; i < data.length; i++) {
+    html += `<div class="row">
+                <div class="col">
+                  <span>${i + 1}</span>
+                </div>
+                <div class="col">
+                  <span>${data[i].orgName}</span>
+                </div>
+                <div class="col">
+                  <a href="${data[i].website}">${data[i].website}</a>
+                </div>
+                <div class="col">
+                  <span>${data[i].jobProfile.jobOffer}</span>
+                </div>
+                <div class="col">
+                  <span>${showArray(data[i].jobProfile.eligibleBatches)}</span>
+                </div>
+                <div class="col">
+                  <span>${data[i].bTech.CTC}</span>
+                </div>
+                <div class="col">
+                  <span>${data[i].jobProfile.selectionProcess}</span>
+                </div>
+                <div class="col">
+                  <button onclick="showDetails('${data[
+                    i
+                  ]._id.toString()}')">View</button>
+                </div>
+              </div>`;
+  }
+  detailsShow.innerHTML = html;
+};
+
+const displayParticularRecruiter = (data) => {
+  let html = `
+  <div class="fields-head">
+  <h3 style="color:#e7a849">Date of Application: ${data.dof}</h3>
+</div>
+<div class="fields-head">
+  <h3>1. General Information</h3>
+</div>
+<div class="fields">
+  <h4>Name of Organization:</h4>
+  <span>${data.orgName}</span>
+</div>
+<div class="fields">
+  <h4>Website:</h4>
+  <a href="${data.webiste}">${data.website}</a>
+</div>
+<div class="fields">
+  <h4>Location:</h4>
+  <span>${data.postalAddress}</span>
+</div>
+<div class="fields">
+  <h4>Category:</h4>
+  <span>${data.category}</span>
+</div>
+<div class="fields">
+  <h4>Industry Sector:</h4>
+  <span>${data.industrySector}</span>
+</div>
+<div class="fields">
+  <h4>About Comapny:</h4>
+  <span>${data.aboutOrg}</span>
+</div>
+<div class="fields-head">
+  <h3>2.a. Contact Details: Head HR</h3>
+</div>
+<div class="fields">
+  <h4>Name of Head HR:</h4>
+  <span>${data.contact.headHR.name}</span>
+</div>
+<div class="fields">
+  <h4>Phone:</h4>
+  <span>${data.contact.headHR.mobile}</span>
+</div>
+<div class="fields">
+  <h4>Email:</h4>
+  <a href="mailto:${data.contact.headHR.email}"
+    >${data.contact.headHR.email}</a
+  >
+</div>
+<div class="fields">
+  <h4>Landline:</h4>
+  <span>${data.contact.headHR.landline}</span>
+</div>
+<div class="fields-head">
+  <h3>2.b. Contact Details: First Contact Person</h3>
+</div>
+<div class="fields">
+  <h4>Name of First Contact Person:</h4>
+  <span>${data.contact.firstContactPerson.name}</span>
+</div>
+<div class="fields">
+  <h4>Phone:</h4>
+  <span>${data.contact.firstContactPerson.mobile}</span>
+</div>
+<div class="fields">
+  <h4>Email:</h4>
+  <a href="mailto:${data.contact.firstContactPerson.email}"
+    >${data.contact.firstContactPerson.email}</a
+  >
+</div>
+<div class="fields">
+  <h4>Landline:</h4>
+  <span>${data.contact.firstContactPerson.landline}</span>
+</div>
+<div class="fields-head">
+  <h3>3. Job Profile Details</h3>
+</div>
+<div class="fields">
+  <h4>Job Offer Type:</h4>
+  <span>${data.jobProfile.jobOffer}</span>
+</div>
+<div class="fields">
+  <h4>Selection Type:</h4>
+  <span>${data.jobProfile.selectionProcess}</span>
+</div>
+<div class="fields">
+  <h4>Eligible Batches:</h4>
+  <span>${showArray(data.jobProfile.eligibleBatches)}</span>
+</div>
+<div class="fields">
+  <h4>Eligible Branches:</h4>
+  <span>${showArray(data.branches.bTech)}</span>
+</div>
+<div class="fields">
+  <h4>Job Designation:</h4>
+  <span>${data.bTech.jobDesignation}</span>
+</div>
+<div class="fields">
+  <h4>Place of Posting:</h4>
+  <span>${data.bTech.jobLocation}</span>
+</div>
+<div class="fields">
+  <h4>Job Description/Summary:</h4>
+  <span>${data.bTech.jobDescription}</span>
+</div>
+<div class="fields-head">
+  <h3>4. Salary Details:</h3>
+</div>
+<div class="fields">
+  <h4>Remuneration for Internship:</h4>
+  <span>${data.salary.renumeration}</span>
+</div>
+<div class="fields">
+  <h4>Cost to Company (CTC):</h4>
+  <span>data.bTech.CTC</span>
+</div>
+<div class="fields">
+  <h4>Gross:</h4>
+  <span>${data.bTech.gross}</span>
+</div>
+<div class="fields">
+  <h4>Take-Home:</h4>
+  <span>${data.bTech.takeHome}</span>
+</div>
+<div class="fields">
+  <h4>Bonus/Perks/Incentives:</h4>
+  <span>${data.bTech.bonus}</span>
+</div>
+<div class="fields">
+  <h4>Relocation:</h4>
+  <span>${data.bTech.relocationBonus}</span>
+</div>
+<div class="fields">
+  <h4>Bond or Contract:</h4>
+  <span>${data.bTech.contract}</span>
+</div>
+<div class="fields-head">
+  <h3>5. Process:</h3>
+</div>
+<div class="fields">
+  <h4>Mode of Selection:</h4>
+  <span>${showArray(data.programs.bTech)}</span>
+</div>
+<div class="fields">
+  <h4>Number of Rounds:</h4>
+  <span>${data.selectionProcess.rounds}</span>
+</div>
+<div class="fields">
+  <h4>Eligibility Criteria:</h4>
+  <span>${data.selectionProcess.eligibility}</span>
+</div>
+<div class="fields">
+  <h4>Prferred Period of Visit for Recruitment:</h4>
+  <span>${data.selectionProcess.pov}</span>
+</div>
+<div class="fields-head">
+  <h3>6. Preference & Requirements</h3>
+</div>
+<div class="fields">
+  <h4>Preferred Location:</h4>
+  <span>${data.selectionProcess.preferredLocation}</span>
+</div>
+<div class="fields">
+  <h4>Number of Offers:</h4>
+  <span>${data.selectionProcess.offers}</span>
+</div>
+<div class="fields">
+  <h4>Number of member visiting IIIT Bhagalpur Campus:</h4>
+  <span>${data.logisticalDetails.members}</span>
+</div>
+<div class="fields">
+  <h4>No. of Rooms and Days required for the selection Process:</h4>
+  <span>${data.logisticalDetails.rooms}</span>
+</div>
+<div class="fields">
+  <h4>Other Requirements:</h4>
+  <span>${data.otherRequirements}</span>
+</div>
+  `;
+  recruiterDetails.innerHTML = html;
+};
+
 const displayData = (data) => {
   document.title = `Welcome !! ${data.name} | ${data.post}`;
 };
@@ -223,7 +451,6 @@ const fetchAdminData = () => {
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       if (data.status == 0) {
         displayData(data.data);
       } else {
@@ -285,10 +512,69 @@ const fetchEventsData = () => {
     });
 };
 
+const fetchRecruitersData = () => {
+  fetch(`/api/admin/jafView`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.status == 0) {
+        displayRecruiterData(data.data);
+      } else {
+        alert(data.error);
+      }
+    })
+    .catch((err) => {
+      alert(err.message);
+    });
+};
+
+const showDetails = (id) => {
+  let overlay = document.querySelector(".overlay");
+  let studentPage = document.querySelector(".student-page");
+  overlay.style.display = "flex";
+  overlay.style["overflow-y"] = "auto";
+  studentPage.style["overflow-y"] = "hidden";
+  studentPage.style["position"] = "fixed";
+  fetchParticularRecruiter(id);
+};
+
+const closeDetails = () => {
+  let overlay = document.querySelector(".overlay");
+  let studentPage = document.querySelector(".student-page");
+  overlay.style.display = "none";
+  studentPage.style["overflow-y"] = "auto";
+  studentPage.style["position"] = "relative";
+};
+
+const fetchParticularRecruiter = (id) => {
+  fetch(`/api/admin/jafDetails?id=${id}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.status == 0) {
+        displayParticularRecruiter(data.data);
+      } else {
+        alert(data.error);
+      }
+    })
+    .catch((err) => {
+      alert(err.message);
+    });
+};
+
 if (localStorage.getItem("adminToken")) {
   fetchAdminData();
   fetchNewsData();
   fetchEventsData();
+  fetchRecruitersData();
   // displayDetails();
 } else {
   window.location.href = "/admin";

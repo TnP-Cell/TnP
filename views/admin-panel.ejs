@@ -24,7 +24,7 @@
     />
     <meta
       name="description"
-      content="The training and placement cell is responsible for all the placement activities of all the departments of the institute. The placement activity of the institute is conducted at IIIT Bhagalpur Campus."
+      content="Portal for Training and Placement Cell Coordinators and Officials."
     />
     <meta name="subject" content="Training and Placement Cell, IIITBH" />
     <meta
@@ -65,7 +65,7 @@
     />
     <meta
       name="og:description"
-      content="The training and placement cell is responsible for all the placement activities of all the departments of the institute. The placement activity of the institute is conducted at IIIT Bhagalpur Campus."
+      content="Portal for Training and Placement Cell Coordinators and Officials."
     />
 
     <meta name="og:email" content="tpo@iiitbh.ac.in" />
@@ -83,6 +83,189 @@
   </head>
 
   <body>
+    <div class="overlay">
+      <div id="close-overlay">
+        <button class="close-button" onclick="closeDetails();">Close</button>
+      </div>
+      <div class="recruiters-details">
+        <!-- <div class="fields-head">
+          <h3>Date of Application: ${data.dof}</h3>
+        </div>
+        <div class="fields-head">
+          <h3>1. General Information</h3>
+        </div>
+        <div class="fields">
+          <h4>Name of Organization:</h4>
+          <span>${data.orgName}</span>
+        </div>
+        <div class="fields">
+          <h4>Website:</h4>
+          <a href="${data.webiste}">${data.website}</a>
+        </div>
+        <div class="fields">
+          <h4>Location:</h4>
+          <span>${data.postalAddress}</span>
+        </div>
+        <div class="fields">
+          <h4>Category:</h4>
+          <span>${data.category}</span>
+        </div>
+        <div class="fields">
+          <h4>Industry Sector:</h4>
+          <span>${data.industrySector}</span>
+        </div>
+        <div class="fields">
+          <h4>About Comapny:</h4>
+          <span>${data.aboutOrg}</span>
+        </div>
+        <div class="fields-head">
+          <h3>2.a. Contact Details: Head HR</h3>
+        </div>
+        <div class="fields">
+          <h4>Name of Head HR:</h4>
+          <span>${data.contact.headHR.name}</span>
+        </div>
+        <div class="fields">
+          <h4>Phone:</h4>
+          <span>${data.contact.headHR.mobile}</span>
+        </div>
+        <div class="fields">
+          <h4>Email:</h4>
+          <a href="mailto:${data.contact.headHR.email}"
+            >${data.contact.headHR.email}</a
+          >
+        </div>
+        <div class="fields">
+          <h4>Landline:</h4>
+          <span>${data.contact.headHR.landline}</span>
+        </div>
+        <div class="fields-head">
+          <h3>2.b. Contact Details: First Contact Person</h3>
+        </div>
+        <div class="fields">
+          <h4>Name of First Contact Person:</h4>
+          <span>${data.contact.firstContactPerson.name}</span>
+        </div>
+        <div class="fields">
+          <h4>Phone:</h4>
+          <span>${data.contact.firstContactPerson.mobile}</span>
+        </div>
+        <div class="fields">
+          <h4>Email:</h4>
+          <a href="mailto:${data.contact.firstContactPerson.email}"
+            >${data.contact.firstContactPerson.email}</a
+          >
+        </div>
+        <div class="fields">
+          <h4>Landline:</h4>
+          <span>${data.contact.firstContactPerson.landline}</span>
+        </div>
+        <div class="fields-head">
+          <h3>3. Job Profile Details</h3>
+        </div>
+        <div class="fields">
+          <h4>Job Offer Type:</h4>
+          <span>${data.jobProfile.jobOffer}</span>
+        </div>
+        <div class="fields">
+          <h4>Selection Type:</h4>
+          <span>${showArray(data.jobProfile.selectionProcess)}</span>
+        </div>
+        <div class="fields">
+          <h4>Eligible Batches:</h4>
+          <span>${showArray(data.jobProfile.eligibleBatches)}</span>
+        </div>
+        <div class="fields">
+          <h4>Eligible Branches:</h4>
+          <span>${showArray(data.branches.bTech)}</span>
+        </div>
+        <div class="fields">
+          <h4>Job Designation:</h4>
+          <span>${data.bTech.jobDesignation}</span>
+        </div>
+        <div class="fields">
+          <h4>Place of Posting:</h4>
+          <span>${data.bTech.jobLocation}</span>
+        </div>
+        <div class="fields">
+          <h4>Job Description/Summary:</h4>
+          <span>${data.bTech.jobDescription}</span>
+        </div>
+        <div class="fields-head">
+          <h3>4. Salary Details:</h3>
+        </div>
+        <div class="fields">
+          <h4>Remuneration for Internship:</h4>
+          <span>${data.salary.renumeration}</span>
+        </div>
+        <div class="fields">
+          <h4>Cost to Company (CTC):</h4>
+          <span>data.bTech.CTC</span>
+        </div>
+        <div class="fields">
+          <h4>Gross:</h4>
+          <span>${data.bTech.gross}</span>
+        </div>
+        <div class="fields">
+          <h4>Take-Home:</h4>
+          <span>${data.bTech.takeHome}</span>
+        </div>
+        <div class="fields">
+          <h4>Bonus/Perks/Incentives:</h4>
+          <span>${data.bTech.bonus}</span>
+        </div>
+        <div class="fields">
+          <h4>Relocation:</h4>
+          <span>${data.bTech.relocationBonus}</span>
+        </div>
+        <div class="fields">
+          <h4>Bond or Contract:</h4>
+          <span>${data.bTech.contract}</span>
+        </div>
+        <div class="fields-head">
+          <h3>5. Process:</h3>
+        </div>
+        <div class="fields">
+          <h4>Mode of Selection:</h4>
+          <span>${showArray(data.programs.bTech)}</span>
+        </div>
+        <div class="fields">
+          <h4>Number of Rounds:</h4>
+          <span>${data.selectionProcess.rounds}</span>
+        </div>
+        <div class="fields">
+          <h4>Eligibility Criteria:</h4>
+          <span>${data.selectionProcess.eligibility}</span>
+        </div>
+        <div class="fields">
+          <h4>Prferred Period of Visit for Recruitment:</h4>
+          <span>${data.selectionProcess.pov}</span>
+        </div>
+        <div class="fields-head">
+          <h3>6. Preference & Requirements</h3>
+        </div>
+        <div class="fields">
+          <h4>Preferred Location:</h4>
+          <span>${data.selectionProcess.preferredLocation}</span>
+        </div>
+        <div class="fields">
+          <h4>Number of Offers:</h4>
+          <span>${data.SelectionProcess.offers}</span>
+        </div>
+        <div class="fields">
+          <h4>Number of member visiting IIIT Bhagalpur Campus:</h4>
+          <span>${data.logisticalDetails.members}</span>
+        </div>
+        <div class="fields">
+          <h4>No. of Rooms and Days required for the selection Process:</h4>
+          <span>${data.logisticalDetails.rooms}</span>
+        </div>
+        <div class="fields">
+          <h4>Other Requirements:</h4>
+          <span>${data.otherRequirements}</span>
+        </div> -->
+      </div>
+    </div>
     <section class="student-page">
       <div class="main-container">
         <div class="top-div">
@@ -221,7 +404,7 @@
                     </div> -->
           </div>
         </div>
-        <!-- <div class="bottom-div" style="margin-top: 2%">
+        <div class="bottom-div" style="margin-top: 2%">
           <div class="responses">
             <div class="response-table">
               <div class="row" style="margin-top: 2px">
@@ -241,62 +424,47 @@
                   <h4>Eligible Batches</h4>
                 </div>
                 <div class="col">
-                  <h4>Eligible Branches</h4>
-                </div>
-                <div class="col">
-                  <h4>Job Designation</h4>
-                </div>
-                <div class="col">
                   <h4>CTC</h4>
                 </div>
                 <div class="col">
                   <h4>Mode of Selection</h4>
                 </div>
                 <div class="col">
-                  <h4>Preferred Location</h4>
-                </div>
-                <div class="col">
-                  <h4>No. of Offers</h4>
+                  <h4>Actions</h4>
                 </div>
               </div>
-              <div class="row">
+              <div id="show-details"></div>
+              <!-- <div class="row">
                 <div class="col">
-                  <span>1</span>
+                  <span>${i+1}</span>
                 </div>
                 <div class="col">
-                  <span>XYZ</span>
+                  <span>${data[i].orgName}</span>
                 </div>
                 <div class="col">
-                  <a href="https://tnp.iiitbh.ac.in"></a>
+                  <a href="${data[i].website}">${data[i].website}</a>
                 </div>
                 <div class="col">
-                  <span>xyz</span>
+                  <span>${data[i].jobProfile.jobOffer}</span>
                 </div>
                 <div class="col">
-                  <span>xyz</span>
+                  <span>${showArray(data[i].jobProfile.eligibleBatches)}</span>
                 </div>
                 <div class="col">
-                  <span>lor</span>
+                  <span>${data[i].bTech.CTC}</span>
                 </div>
                 <div class="col">
-                  <span></span>
+                  <span>${data[i].jobProfile.selectionProcess}</span>
                 </div>
                 <div class="col">
-                  <span></span>
+                  <button onclick="showDetails(${data[
+                    i
+                  ]._id.toString()});">View</button>
                 </div>
-                <div class="col">
-                  <span></span>
-                </div>
-                <div class="col">
-                  <span></span>
-                </div>
-                <div class="col">
-                  <span></span>
-                </div>
-              </div>
+              </div> -->
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </section>
   </body>
