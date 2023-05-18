@@ -70,8 +70,12 @@ admin.post("/adminRegister", async (req, res) => {
       });
       await adminData
         .save()
-        .then((result) => {
-          res.status(200).json({ status: 0 });
+        .then(async (result) => {
+          let final = await sendMail(username, password);
+          if (final.status == 0) res.status(200).json({ status: 0 });
+          else {
+            return res.status(401).json({ status: -1, error: final.error });
+          }
         })
         .catch((err) => {
           return res.status(400).json({ status: -1, error: err.message });
@@ -240,7 +244,7 @@ admin.post("/jafRecruit", async (req, res) => {
     .save()
     .then((result) => {
       // console.log(data);
-      fetch(`https://tnp-mailer.vercel.app/sendMail`, {
+      fetch(`https://tnp-mailer.vercel.app/sendmail`, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -284,4 +288,25 @@ admin.get("/jafDetails", async (req, res) => {
     });
 });
 
+const sendMail = async (username, password) => {
+  let data = { username, password };
+  await fetch(`https://tnp-mailer.vercel.app/registermail`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.status === 0) {
+        return { status: 0 };
+      } else {
+        return { status: -1, error: data.error };
+      }
+    })
+    .catch((err) => {
+      return res.status(400).json({ status: -1, error: err.message });
+    });
+};
 export default admin;
