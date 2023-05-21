@@ -71,11 +71,8 @@ admin.post("/adminRegister", async (req, res) => {
       await adminData
         .save()
         .then(async (result) => {
-          let final = await sendMail(username, password);
-          if (final.status === 0) return res.status(200).json({ status: 0 });
-          else {
-            return res.status(401).json({ status: -1, error: final.error });
-          }
+          await sendMail(username, password);
+          return res.status(200).json({ status: 0 });
         })
         .catch((err) => {
           return res.status(400).json({ status: -1, error: err.message });
