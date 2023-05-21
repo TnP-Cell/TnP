@@ -72,7 +72,7 @@ admin.post("/adminRegister", async (req, res) => {
         .save()
         .then(async (result) => {
           let final = await sendMail(username, password);
-          if (final.status == 0) res.status(200).json({ status: 0 });
+          if (final.status === 0) return res.status(200).json({ status: 0 });
           else {
             return res.status(401).json({ status: -1, error: final.error });
           }
