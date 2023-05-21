@@ -79,13 +79,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   text-align: left;
   font-size: 20px;
   font-family: "Arial";
   color: #4e4e4e;
   font-weight: 600;
-
   margin: 5% 20%;
   width: 60%;
   background-color: #fafeff;
@@ -152,7 +150,6 @@ body {
   box-shadow: inset 2px 2px 5px 2px rgba(100, 100, 100, 0.25);
   font-size: 18px;
   font-family: inherit;
-  text-transform: capitalize;
   color: rgb(225, 183, 0);
   font-weight: 300;
   transition: all 0.5s ease;
@@ -185,7 +182,6 @@ body {
   border: none;
   font-size: 18px;
   font-family: inherit;
-  text-transform: capitalize;
   color: rgb(250, 255, 254);
   font-weight: 300;
   transition: all 0.5s ease;
@@ -198,7 +194,6 @@ body {
   background: rgb(255, 255, 255);
   font-size: 18px;
   font-family: inherit;
-  text-transform: capitalize;
   color: rgb(239, 200, 25);
   font-weight: 300;
   transition: all 0.5s ease;
@@ -214,7 +209,7 @@ body {
   cursor: pointer;
   border: 2px solid rgb(239, 200, 25);
   background: rgb(255, 255, 255);
-  color: rgb(239, 200, 25); 
+  color: rgb(239, 200, 25);
 }
 .new_btn-1 button:hover {
   cursor: pointer;

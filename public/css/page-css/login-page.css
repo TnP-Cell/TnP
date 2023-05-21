@@ -96,7 +96,6 @@ login-page {
   box-shadow: inset 2px 2px 5px 2px rgba(60, 60, 60, 0.25);
   font-size: 18px;
   font-family: inherit;
-  text-transform: capitalize;
   color: rgb(225, 183, 0);
   font-weight: 300;
   transition: all 0.5s ease;
@@ -121,7 +120,7 @@ login-page {
   border: none;
   font-size: 18px;
   font-family: inherit;
-  text-transform: capitalize;
+ 
   color: rgb(250, 255, 254);
   font-weight: 300;
   transition: all 0.5s ease;
