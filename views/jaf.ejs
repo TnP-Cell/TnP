@@ -186,12 +186,18 @@
             <div class="heading">
               <h1>Registration Details</h1>
             </div>
+            <span
+              >All fields marked with <span style="color: red">*</span> are
+              required</span
+            >
             <form id="recruit">
               <div class="common-div">
                 <h2>1. General Information:</h2>
                 <div class="row-div">
                   <div class="form-group">
-                    <h3 for="appNo">Name of Organization:</h3>
+                    <h3 for="appNo">
+                      Name of Organization: <span style="color: red">*</span>
+                    </h3>
                     <input
                       type="text"
                       name="orgName"
@@ -204,7 +210,9 @@
                 </div>
                 <div class="row-div">
                   <div class="form-group">
-                    <h3 for="fname">Website:</h3>
+                    <h3 for="fname">
+                      Website: <span style="color: red">*</span>
+                    </h3>
                     <input
                       type="text"
                       name="website"
@@ -215,7 +223,9 @@
                     />
                   </div>
                   <div class="form-group">
-                    <h3 for="father-name">Location:</h3>
+                    <h3 for="father-name">
+                      Location: <span style="color: red">*</span>
+                    </h3>
                     <input
                       type="text"
                       name="postalAddress"
@@ -228,7 +238,9 @@
                 </div>
                 <div class="row-div">
                   <div class="form-group">
-                    <h3 for="category">Category:</h3>
+                    <h3 for="category">
+                      Category: <span style="color: red">*</span>
+                    </h3>
                     <select id="category" name="category">
                       <option value="MNC">MNC</option>
                       <option value="PSU">PSU</option>
@@ -237,7 +249,9 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <h3 for="phone">Industry Sector:</h3>
+                    <h3 for="phone">
+                      Industry Sector: <span style="color: red">*</span>
+                    </h3>
                     <input
                       type="tel"
                       name="industrySector"
@@ -249,18 +263,23 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <h3 for="o-info">About Company:</h3>
+                  <h3 for="o-info">
+                    About Company: <span style="color: red">*</span>
+                  </h3>
                   <textarea
                     name="aboutOrg"
                     id="o-info"
                     cols="30"
                     rows="10"
+                    required
                   ></textarea>
                 </div>
                 <h2>2.a Contact Details: Head HR</h2>
                 <div class="row-div">
                   <div class="form-group">
-                    <h3 for="phone">Name of Head HR:</h3>
+                    <h3 for="phone">
+                      Name of Head HR: <span style="color: red">*</span>
+                    </h3>
                     <input
                       type="text"
                       name="hhname"
@@ -271,7 +290,9 @@
                     />
                   </div>
                   <div class="form-group">
-                    <h3 for="phone">Phone:</h3>
+                    <h3 for="phone">
+                      Phone: <span style="color: red">*</span>
+                    </h3>
                     <input
                       type="tel"
                       name="hhmobile"
@@ -284,7 +305,7 @@
                 </div>
                 <div class="row-div">
                   <div class="form-group">
-                    <h3 for="mail">Email:</h3>
+                    <h3 for="mail">Email: <span style="color: red">*</span></h3>
                     <input
                       type="email"
                       name="hhemail"
@@ -302,7 +323,6 @@
                       id="city"
                       class="form-control"
                       placeholder="Enter Tel Number"
-                      required
                     />
                   </div>
                 </div>
@@ -316,7 +336,6 @@
                       id="phone"
                       class="form-control"
                       placeholder="Enter Person Name"
-                      required
                     />
                   </div>
                   <div class="form-group">
@@ -327,7 +346,6 @@
                       id="city"
                       class="form-control"
                       placeholder="Enter Phone Number"
-                      required
                     />
                   </div>
                 </div>
@@ -340,7 +358,6 @@
                       id="city"
                       class="form-control"
                       placeholder="Enter Email-ID"
-                      required
                     />
                   </div>
                   <div class="form-group">
@@ -351,15 +368,16 @@
                       id="city"
                       class="form-control"
                       placeholder="Enter Tel Number"
-                      required
                     />
                   </div>
                 </div>
                 <h2>3. Job Profile Details</h2>
                 <div class="row-div">
                   <div class="form-group">
-                    <h3 for="gnd">Job Offer Type</h3>
-                    <select id="gnd" name="jobOffer">
+                    <h3 for="gnd">
+                      Job Offer Type <span style="color: red">*</span>
+                    </h3>
+                    <select id="gnd" name="jobOffer" required>
                       <option value="Full Time">Full Time</option>
                       <option value="Internship">Internship</option>
                       <option value="Full Time + Internship">
@@ -368,8 +386,10 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <h3 for="married">Selection Type</h3>
-                    <select id="married" name="selectionProcess">
+                    <h3 for="married">
+                      Selection Type <span style="color: red">*</span>
+                    </h3>
+                    <select id="married" name="selectionProcess" required>
                       <option value="On Campus">On Campus</option>
                       <option value="Off Campus">Off Campus</option>
                     </select>
@@ -377,7 +397,9 @@
                 </div>
                 <div class="row-div">
                   <div class="form-group">
-                    <h3 for="nation">Eligible Batches:</h3>
+                    <h3 for="nation">
+                      Eligible Batches: <span style="color: red">*</span>
+                    </h3>
                     <fieldset id="nation">
                       <div class="checkbox">
                         <input type="checkbox" name="eligibility" value="B26" />
@@ -426,7 +448,9 @@
                     </fieldset>
                   </div>
                   <div class="form-group">
-                    <h3 for="nation">Eligible Branches:</h3>
+                    <h3 for="nation">
+                      Eligible Branches: <span style="color: red">*</span>
+                    </h3>
                     <fieldset id="nation">
                       <div class="checkbox">
                         <input type="checkbox" name="branches" value="CSE" />
@@ -455,7 +479,9 @@
                 </div>
                 <div class="row-div">
                   <div class="form-group">
-                    <h3 for="agp">Job Designation:</h3>
+                    <h3 for="agp">
+                      Job Designation: <span style="color: red">*</span>
+                    </h3>
                     <input
                       type="text"
                       name="jobDesignation"
@@ -466,7 +492,9 @@
                     />
                   </div>
                   <div class="form-group">
-                    <h3 for="orcid">Place of Posting:</h3>
+                    <h3 for="orcid">
+                      Place of Posting: <span style="color: red">*</span>
+                    </h3>
                     <input
                       type="text"
                       name="jobLocation"
@@ -478,12 +506,15 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <h3 for="o-info">Job Description / Summary:</h3>
+                  <h3 for="o-info">
+                    Job Description / Summary: <span style="color: red">*</span>
+                  </h3>
                   <textarea
                     name="jobDescription"
                     id="o-info"
                     cols="30"
                     rows="10"
+                    required
                   ></textarea>
                 </div>
                 <h2>4. Salary Details:</h2>
@@ -496,11 +527,12 @@
                       id="agp-name"
                       class="form-control"
                       placeholder="Enter Remuneration"
-                      required
                     />
                   </div>
                   <div class="form-group">
-                    <h3 for="orcid">Cost to Co. (CTC):</h3>
+                    <h3 for="orcid">
+                      Cost to Co. (CTC): <span style="color: red">*</span>
+                    </h3>
                     <input
                       type="text"
                       name="ctc"
@@ -513,7 +545,7 @@
                 </div>
                 <div class="row-div">
                   <div class="form-group">
-                    <h3 for="agp">Gross:</h3>
+                    <h3 for="agp">Gross: <span style="color: red">*</span></h3>
                     <input
                       type="text"
                       name="gross"
@@ -531,7 +563,6 @@
                       id="orcid-id"
                       class="form-control"
                       placeholder="Enter Take-Home"
-                      required
                     />
                   </div>
                 </div>
@@ -544,7 +575,6 @@
                       id="agp-name"
                       class="form-control"
                       placeholder="Enter Bonus"
-                      required
                     />
                   </div>
                   <div class="form-group">
@@ -555,7 +585,6 @@
                       id="orcid-id"
                       class="form-control"
                       placeholder="Enter relocation"
-                      required
                     />
                   </div>
                 </div>
@@ -573,7 +602,9 @@
                 <h2>5. Process:</h2>
                 <div class="row-div">
                   <div class="form-group">
-                    <h3 for="ogn">Mode of Selection:</h3>
+                    <h3 for="ogn">
+                      Mode of Selection: <span style="color: red">*</span>
+                    </h3>
                     <!-- <select id="nation" name="spmode">
                       <option value="Shortlist from CVs">
                         Shortlist from CVs
@@ -631,7 +662,9 @@
                     </fieldset>
                   </div>
                   <div class="form-group">
-                    <h3 for="dgn">Number of Rounds:</h3>
+                    <h3 for="dgn">
+                      Number of Rounds: <span style="color: red">*</span>
+                    </h3>
                     <input
                       type="text"
                       name="sprounds"
@@ -646,6 +679,7 @@
                   <div class="form-group">
                     <h3 for="wrk">
                       Eligibility Criteria (CPI cutoff on a scale of 0-10):
+                      <span style="color: red">*</span>
                     </h3>
                     <input
                       type="text"
@@ -666,15 +700,14 @@
                       id="pay-name"
                       class="form-control"
                       placeholder="Enter Period"
-                      required
                     />
                   </div>
                 </div>
                 <h2>6. Preferance & Requirements:</h2>
                 <div class="row-div">
                   <div class="form-group">
-                    <h3 for="dge">Preferred Location:</h3>
-                    <select id="nation" name="preferredLocation">
+                    <h3 for="dge">Preferred Location: <span style="color: red">*</span></h3>
+                    <select id="nation" name="preferredLocation" required>
                       <option value="IIIT Bhagalpur Campus">
                         IIIT Bhagalpur Campus
                       </option>
@@ -689,7 +722,6 @@
                       id="branch"
                       class="form-control"
                       placeholder="Enter of expected offers"
-                      required
                     />
                   </div>
                 </div>
@@ -704,7 +736,6 @@
                       id="college"
                       class="form-control"
                       placeholder="Enter number of members visiting IIIT Bhagalpur campus"
-                      required
                     />
                   </div>
                   <div class="form-group">
@@ -717,7 +748,6 @@
                       id="year"
                       class="form-control"
                       placeholder="Enter number of rooms & days"
-                      required
                     />
                   </div>
                   <!-- <div class="form-group">
