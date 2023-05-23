@@ -706,7 +706,9 @@
                 <h2>6. Preferance & Requirements:</h2>
                 <div class="row-div">
                   <div class="form-group">
-                    <h3 for="dge">Preferred Location: <span style="color: red">*</span></h3>
+                    <h3 for="dge">
+                      Preferred Location: <span style="color: red">*</span>
+                    </h3>
                     <select id="nation" name="preferredLocation" required>
                       <option value="IIIT Bhagalpur Campus">
                         IIIT Bhagalpur Campus
@@ -772,8 +774,8 @@
                   ></textarea>
                 </div>
               </div>
-              <div class="new_btn-1 submit-btn">
-                <button type="submit" class="btn">Save</button>
+              <div class="new_btn submit-btn">
+                <button type="submit" class="btn">Submit now</button>
               </div>
             </form>
           </div>
@@ -790,8 +792,14 @@
               information may result in rejection.
             </p>
           </div>
-          <div class="new_btn submit-btn">
-            <button type="submit" class="btn">Final Submit</button>
+          <div class="new_btn-1 submit-btn">
+            <button
+              type="submit"
+              class="btn"
+              onclick="window.location.replace('/thank');"
+            >
+              Yes, Complete it
+            </button>
           </div>
         </div>
       </div>
