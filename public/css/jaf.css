@@ -9,15 +9,6 @@ body {
   width: 100%;
 }
 
-.navbar {
-  width: 90%;
-  height: 10vh;
-  margin: 1% auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .logo {
   display: flex;
   justify-content: flex-start;
