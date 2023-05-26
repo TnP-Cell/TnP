@@ -24,7 +24,6 @@ news.post("/newsUpload", jwtverify, async (req, res) => {
       await newsAdd
         .save()
         .then((result) => {
-          if (err) res.status(400).json({ status: -1 });
           res.status(200).json({ status: 0 });
         })
         .catch((err) => {

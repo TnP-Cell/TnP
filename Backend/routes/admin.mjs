@@ -8,6 +8,8 @@ import upload from "../middleware/fileUpload.mjs";
 import jafModel from "../models/jafModel.mjs";
 import fetch from "node-fetch";
 import dotenv from "dotenv";
+import fs from "fs";
+import path from "path";
 dotenv.config();
 const admin = express.Router();
 
@@ -109,7 +111,7 @@ admin.post(
           post: result.post,
           img: {
             data: fs.readFileSync(
-              path.join(__dirname + "/uploads/" + req.file.filename)
+              path.join("./backend/routes/uploads/" + req.file.filename)
             ),
             contentType: "image/jpeg",
           },
@@ -120,13 +122,13 @@ admin.post(
           .then((result) => {
             console.log("Image Uploaded");
             fs.unlinkSync(
-              path.join(__dirname + "/uploads/" + req.file.filename)
+              path.join("./backend/routes/uploads/" + req.file.filename)
             );
+            return res.status(200).json({ status: 0 });
           })
           .catch((err) => {
             return res.status(400).json({ status: -1, error: err.message });
           });
-        return res.status(200).json({ status: 0 });
       })
       .catch((err) => {
         return res.status(400).json({ status: -1, error: err.message });
