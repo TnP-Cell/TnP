@@ -369,7 +369,7 @@ const displayParticularRecruiter = (data) => {
 </div>
 <div class="fields">
   <h4>Cost to Company (CTC):</h4>
-  <span>data.bTech.CTC</span>
+  <span>${data.bTech.CTC}</span>
 </div>
 <div class="fields">
   <h4>Gross:</h4>
