@@ -214,9 +214,9 @@ function deleteEvent(id) {
 const showArray = (data) => {
   let html = ``;
   data.map((e) => {
-    html += `${e},`;
+    html += `${e}, `;
   });
-  return html.slice(0, -1);
+  return html.slice(0, -2);
 };
 
 const displayRecruiterData = (data) => {
@@ -584,5 +584,9 @@ backBtn.addEventListener("click", () => {
   localStorage.removeItem("adminToken");
   window.location.href = "/admin";
 });
+
+if (window.innerWidth < 992) {
+  window.location.href = "/notview";
+}
 
 // console.log(html);

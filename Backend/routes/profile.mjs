@@ -1,12 +1,14 @@
 import express from "express";
 import fs from "fs";
-import path from "path";
 const profile = express.Router();
 import studentProfile from "../models/studentProfile.mjs";
 import jwt from "jsonwebtoken";
 import jwtverify from "../middleware/jwtVerfication.mjs";
 import upload from "../middleware/fileUpload.mjs";
 import dotenv from "dotenv";
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
+const __dirname = dirname(fileURLToPath(import.meta.url));
 dotenv.config();
 
 profile.post("/login", async (req, res) => {
@@ -18,7 +20,7 @@ profile.post("/login", async (req, res) => {
       if (result.password === password) {
         var data = { id: result._id };
         var auth_token = jwt.sign(data, process.env.JWT_TOKEN);
-        return res.status(200).json({ status: 0, auth_token });
+        return res.status(200).json({ status: 0, auth_token, user: username });
       } else return res.status(401).json({ status: -1 });
     })
     .catch((err) => {
@@ -39,7 +41,7 @@ profile.post("/showProfile", jwtverify, async (req, res) => {
         roll: result.roll,
         cgpa: result.cgpa,
         phone: result.phone,
-        linkeidn: result.linkedin,
+        linkedin: result.linkedin,
         github: result.github,
         profilePic: result.profilePic,
         resume: result.resume,
@@ -50,6 +52,68 @@ profile.post("/showProfile", jwtverify, async (req, res) => {
       return res.status(400).json({ status: -1, error: err.message });
     });
   // res.status(400).json({ status: -1 });
+});
+
+profile.get("/publicprofile/:user", async (req, res) => {
+  let user = decodeURIComponent(req.params.user);
+  await studentProfile
+    .findOne({ email: user })
+    .then((result) => {
+      var data = {
+        email: result.email,
+        name: result.name,
+        branch: result.branch,
+        roll: result.roll,
+        cgpa: result.cgpa,
+        phone: result.phone,
+        linkedin: result.linkedin,
+        github: result.github,
+        profilePic: result.profilePic,
+        resume: result.resume,
+      };
+      return res.status(200).json({ status: 0, data });
+    })
+    .catch((err) => {
+      return res.status(400).json({ status: -1, error: err.message });
+    });
+});
+
+profile.put(
+  "/updateresume",
+  jwtverify,
+  upload.single("resume"),
+  async (req, res) => {
+    var id = req.userid;
+    var resume = {
+      data: fs.readFileSync(
+        path.join(__dirname, "./uploads/", req.file.filename)
+      ),
+      contentType: "pdf",
+    };
+    await studentProfile
+      .findOneAndUpdate({ _id: id }, { resume: resume })
+      .then((result) => {
+        fs.unlinkSync(path.join(__dirname, "./uploads/", req.file.filename));
+        return res.status(200).json({ status: 0 });
+      })
+      .catch((err) => {
+        return res.status(400).json({ status: -1, error: err.message });
+      });
+  }
+);
+
+profile.put("/updatecgpa", jwtverify, async (req, res) => {
+  var id = req.userid;
+  var cgpa = req.body.cgpa;
+  console.log(req.body);
+  await studentProfile
+    .findOneAndUpdate({ _id: id }, { cgpa: cgpa })
+    .then((result) => {
+      return res.status(200).json({ status: 0 });
+    })
+    .catch((err) => {
+      return res.status(400).json({ status: -1, error: err.message });
+    });
 });
 
 var multiUpload = upload.fields([
@@ -83,13 +147,13 @@ profile.post("/register", multiUpload, async (req, res) => {
     github: github,
     profilePic: {
       data: fs.readFileSync(
-        path.join(__dirname + "/uploads/" + req.files.profilePic[0].filename)
+        path.join(__dirname, "/uploads/", req.files.profilePic[0].filename)
       ),
       contentType: "images/png",
     },
     resume: {
       data: fs.readFileSync(
-        path.join(__dirname + "/uploads/" + req.files.resume[0].filename)
+        path.join(__dirname, "/uploads/", req.files.resume[0].filename)
       ),
       contentType: "pdf",
     },
@@ -100,10 +164,10 @@ profile.post("/register", multiUpload, async (req, res) => {
     .then((result) => {
       console.log("Profile Uploaded");
       fs.unlinkSync(
-        path.join(__dirname + "/uploads/" + req.files.profilePic[0].filename)
+        path.join(__dirname, "/uploads/", req.files.profilePic[0].filename)
       );
       fs.unlinkSync(
-        path.join(__dirname + "/uploads/" + req.files.resume[0].filename)
+        path.join(__dirname, "/uploads/", req.files.resume[0].filename)
       );
     })
     .catch((err) => {

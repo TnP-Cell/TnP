@@ -364,6 +364,7 @@ img {
   border-radius: 10px;
   border: 1px solid black;
   width: 100%;
+  height: inherit;
   margin: 0 2px 0 2px;
   text-align: center;
   background-color: #fff;
@@ -373,6 +374,7 @@ img {
 .col span {
   font-size: 16px;
   color: #000;
+  word-wrap: break-word;
 }
 
 .col a {
@@ -387,6 +389,7 @@ img {
   border: none;
   padding: 3%;
   width: 90%;
+  height: 100%;
   border-radius: 15px;
 }
 

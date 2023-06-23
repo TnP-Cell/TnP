@@ -10,7 +10,6 @@ var linkedin = document.querySelector("#linkedin");
 var github = document.querySelector("#github");
 var resume = document.querySelector(".resume");
 var profilePic = document.querySelector("#profile-pic");
-var update = document.querySelectorAll(".update");
 var share = document.querySelectorAll(".share");
 
 const arrayBufferToBase64 = (buffer) => {
@@ -55,98 +54,28 @@ function display(data) {
     data.resume.contentType
   };base64,${arrayBufferToBase64(data.resume.data.data).toString(
     "base64"
-  )}#toolbar=0&view=fith"
-  scrolling="no" frameborder="0" seamless="seamless"></iframe>`;
+  )}#view=fith"
+  scrolling="no" seamless="seamless"></iframe>`;
 }
-
-fetch(`/api/showProfile`, {
-  method: "POST",
-  headers: {
-    "content-type": "application/json",
-    auth_token: `${localStorage.getItem("token")}`,
-  },
-})
-  .then((res) => res.json())
-  .then((data) => {
-    // console.log(data.status);
-    display(data.data);
-  })
-  .catch((err) => {
-    alert("Something Went Wrong!!" + err);
-  });
-
-const logout = () => {
-  localStorage.removeItem("token");
-  window.location.href = "/profile";
-};
-
-if (!localStorage.getItem("token")) {
-  update.forEach((e) => {
-    e.style.display = "none";
-  });
-}
-
-const overlayClose = () => {
-  document.querySelector(".overlay").style.display = "none";
-};
-
-const overlayOpen = () => {
-  document.querySelector(".overlay").style.display = "flex";
-};
-
-document.forms["update-resume"].addEventListener("submit", (e) => {
-  e.preventDefault();
-  var formData = new FormData(e.target);
-  fetch(`/api/updateresume`, {
-    method: "PUT",
+const fetchData = async () => {
+  let user = `${window.location.pathname}`;
+  user = user.split("/profile/")[1];
+  fetch(`/api/publicprofile/${encodeURIComponent(user)}`, {
+    method: "GET",
     headers: {
-      auth_token: `${localStorage.getItem("token")}`,
+      "content-type": "application/json",
     },
-    body: formData,
   })
     .then((res) => res.json())
     .then((data) => {
-      // console.log(data);
-      if (data.status == 0) {
-        alert("Resume Updated Successfully");
-        window.location.reload();
-      } else {
-        alert("Something Went Wrong!!");
-      }
+      // console.log(data.status);
+      display(data.data);
     })
     .catch((err) => {
       alert("Something Went Wrong!!" + err);
     });
-});
-
-document.forms["update-cgpa"].addEventListener("submit", (e) => {
-  e.preventDefault();
-  var formData = new FormData(e.target);
-  fetch(`/api/updatecgpa`, {
-    method: "PUT",
-    headers: {
-      auth_token: `${localStorage.getItem("token")}`,
-    },
-    body: new URLSearchParams(formData),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      // console.log(data);
-      if (data.status == 0) {
-        alert("CGPA Updated Successfully");
-        window.location.reload();
-      } else {
-        alert("Something Went Wrong!!");
-      }
-    })
-    .catch((err) => {
-      alert("Something Went Wrong!!" + err);
-    });
-});
-
-if (window.innerWidth < 992) {
-  window.location.href = "/notview";
-}
+};
+fetchData();
 
 const copyToClipboard = (str) => {
   navigator.clipboard.writeText(str);

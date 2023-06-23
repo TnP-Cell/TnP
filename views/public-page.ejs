@@ -78,47 +78,17 @@
 
     <link rel="stylesheet" href="/fontawesome-free-6.1.2-web/css/all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css\page-css\student-page.css" />
+    <link rel="stylesheet" href="/css\page-css\public-page.css" />
 
-    <script defer type="text/javascript" src="/js/profile.js"></script>
+    <script defer type="text/javascript" src="/js/public-profile.js"></script>
   </head>
 
   <body>
-    <section class="overlay">
-      <div class="overlay-form">
-        <div class="heading">
-          <h1>Update your Data</h1>
-        </div>
-        <form id="update-resume">
-          <input type="file" name="resume" id="resume" accept=".pdf" required />
-          <input type="submit" id="form-btn" value="Upload" />
-        </form>
-        <form id="update-cgpa">
-          <input
-            type="number"
-            name="cgpa"
-            id="cgpa"
-            step="0.01"
-            min="0"
-            max="10"
-            required
-          />
-          <input type="submit" id="form-btn" value="Update" />
-        </form>
-        <button onclick="overlayClose()" id="close-btn">Close</button>
-      </div>
-    </section>
     <section class="student-page">
       <div class="out-container">
         <div class="mob-nav-div">
-          <div class="back-button" onclick="logout()">
-            <a href="#">Go Back</a>
-          </div>
-          <div class="back-button update" onclick="overlayOpen()">
-            <a href="#">Update Data</a>
-          </div>
           <div class="back-button share">
-            <a href="#">Share</a>
+            <!-- <a href="#">Share</a> -->
           </div>
           <div class="institute-logo">
             <img src="/assets/tnp-logo.svg" alt="logo" />
@@ -126,8 +96,14 @@
         </div>
         <div class="side-container">
           <div class="profile">
-            <div class="profile-img">
-              <img src="/assets/tnp-logo.svg" alt="img" id="profile-pic" />
+            <div class="center-container">
+              <div class="profile-img">
+                <img
+                  src="/assets/blank-profile-picture-973460.svg"
+                  alt="img"
+                  id="profile-pic"
+                />
+              </div>
             </div>
             <div class="profile-name">
               <h3>
@@ -178,17 +154,11 @@
         </div>
         <div class="main-container">
           <div class="top-div">
-            <div class="back-button" onclick="logout()">
-              <a href="#">Go Back</a>
-            </div>
-            <div class="back-button update" onclick="overlayOpen()">
-              <a href="#">Update Data</a>
-            </div>
             <div class="back-button share">
-              <a href="#">Share</a>
+              <!-- <a href="#">Share</a> -->
             </div>
             <div class="institute-logo">
-              <img src="/assets\Screenshot 2022-04-10 235928.png" alt="" />
+              <img src="/assets/tnp-logo.svg" alt="" />
             </div>
           </div>
           <div class="bottom-div">

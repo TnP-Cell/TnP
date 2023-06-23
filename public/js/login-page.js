@@ -31,7 +31,7 @@ document.forms["loginForm"].addEventListener("submit", (e) => {
       console.log(data);
       if (data.status == 0) {
         localStorage.setItem("token", data.auth_token);
-        window.location.href = "/dashboard";
+        window.location.href = `/dashboard/?user=${data.user}`;
       } else {
         alert("Invalid Credentials");
       }
