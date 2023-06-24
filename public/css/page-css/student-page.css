@@ -203,7 +203,7 @@ img {
   color: #434343;
   font-size: 20px;
   font-weight: 500;
-  width: 100%;
+  width: 90%;
 }
 
 .back-button:hover,
@@ -295,6 +295,7 @@ img {
 
   .back-button {
     margin-left: 5%;
+    width: 20%;
   }
   .profile,
   .contact-info,

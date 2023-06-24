@@ -1,4 +1,5 @@
 // var url = "http://194.113.64.156";
+var server_url = "http://localhost:5000";
 
 var names = document.querySelectorAll(".name");
 var branch = document.querySelectorAll(".branch");
@@ -11,6 +12,7 @@ var github = document.querySelector("#github");
 var resume = document.querySelector(".resume");
 var profilePic = document.querySelector("#profile-pic");
 var share = document.querySelectorAll(".share");
+var viewResume = document.querySelector("#view-resume");
 
 const arrayBufferToBase64 = (buffer) => {
   var binary = "";
@@ -41,7 +43,7 @@ function display(data) {
     e.innerHTML = data.email;
   });
   share.forEach((e) => {
-    e.innerHTML = `<button onclick="copyToClipboard('https://tnp.iiitbh.ac.in/profile/${encodeURIComponent(
+    e.innerHTML = `<button onclick="copyToClipboard('${server_url}/profile/${encodeURIComponent(
       data.email
     )}')">Copy Link 📋</button>`;
   });
@@ -56,6 +58,12 @@ function display(data) {
     "base64"
   )}#view=fith"
   scrolling="no" seamless="seamless"></iframe>`;
+  const byteArray = new Uint8Array(data.resume.data.data);
+  const blob = new Blob([byteArray], {
+    type: `application/${data.resume.contentType}`,
+  });
+  const url = URL.createObjectURL(blob);
+  viewResume.href = url;
 }
 const fetchData = async () => {
   let user = `${window.location.pathname}`;

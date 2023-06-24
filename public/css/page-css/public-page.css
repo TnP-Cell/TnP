@@ -45,7 +45,7 @@ img {
   );
   box-shadow: 2px 0px 20px 10px rgba(203, 200, 200, 0.25);
   backdrop-filter: blur(40px);
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .profile {
@@ -192,13 +192,13 @@ img {
 
 .back-button {
   display: flex;
-  justify-content: space-around;
-  height: 40px;
-  width: 15%;
+  justify-content: center;
   align-items: center;
+  width: 20%;
   font-family: "Arial";
   text-align: center;
   cursor: pointer;
+  padding: 1%;
   border-radius: 20px;
   box-shadow: 2px 0px 20px 10px rgba(203, 200, 200, 0.25);
 }
@@ -216,7 +216,7 @@ img {
   color: #434343;
   font-size: 20px;
   font-weight: 500;
-  width: 100%;
+  width: 90%;
 }
 
 .back-button:hover,
@@ -238,17 +238,24 @@ img {
 }
 
 .bottom-div {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   margin-bottom: 20px;
   margin: auto;
 }
 
+.download-resume {
+  display: none;
+}
+
 .resume {
   overflow: hidden;
   display: block;
   border-radius: 20px;
+  width: 100%;
 }
 
 .resume iframe {
@@ -277,20 +284,32 @@ img {
     width: 100%;
     height: 100px;
     margin-bottom: 30px;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: 10%;
+  }
+
+  .mob-nav-div .institute-logo {
+    width: 80%;
   }
   .mob-nav-div img {
-    width: 80%;
+    width: 100%;
   }
 
   .out-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+  }
+
+  .download-resume {
+    display: block;
+  }
+
+  .resume {
+    display: none;
   }
 
   .side-container,
@@ -307,8 +326,9 @@ img {
   }
 
   .back-button {
-    margin-left: 5%;
-    width: 25%;
+    margin: 2% 0;
+    width: 80%;
+    padding: 3%;
   }
 
   .back-button a {
