@@ -1,5 +1,5 @@
 // var url = "http://194.113.64.156";
-var server_url = "http://localhost:5000";
+var server_url = "https://tnp.iiitbh.ac.in";
 
 if (window.innerWidth < 992) {
   window.location.href = "/notview";
