@@ -248,7 +248,12 @@
 .contact-cards {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
+.contact-card {
+  width: 45%;
+}
+
 .contact-card .card-img {
   align-items: center;
 }
