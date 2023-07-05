@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "npm run dev",
-    "dev": "nodemon server.mjs"
+    "dev": "nodemon server.mjs",
+    "build": "node server.mjs"
   }
 }
