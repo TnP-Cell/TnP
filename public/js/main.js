@@ -1,7 +1,6 @@
 // const url = "http://194.113.64.156";
 // var url = "http://localhost:5000";
 
-
 var newsItems = document.querySelectorAll(".news-items");
 var eventItems = document.querySelector(".event-items");
 var newsContent = document.querySelector(".news-content");
@@ -71,8 +70,6 @@ newsContent.addEventListener("mouseout", () => {
 //   nav[2].style.display = "none";
 //   flag = 0;
 // });
-
-
 
 // nav[0].addEventListener("mouseover", () => {
 //   nav[0].style.display = "block";
@@ -150,7 +147,7 @@ function displayImages(data) {
   // var x = data.images;
   var x = data.images;
   // console.log(x.length);
-  for (var i in x) {
+  for (var i = x.length - 1; i >= 0; i--) {
     html += `<div class="carousel-item">
       <img src="data:image/png;base64,${arrayBufferToBase64(
         x[i].img.data.data
