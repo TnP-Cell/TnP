@@ -11,6 +11,9 @@ import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
 dotenv.config();
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const admin = express.Router();
 
 admin.post("/adminLogin", async (req, res) => {
@@ -111,7 +114,7 @@ admin.post(
           post: result.post,
           img: {
             data: fs.readFileSync(
-              path.join("./backend/routes/uploads/" + req.file.filename)
+              path.join(__dirname, "/uploads/", req.file.filename)
             ),
             contentType: "image/jpeg",
           },
@@ -122,7 +125,7 @@ admin.post(
           .then((result) => {
             console.log("Image Uploaded");
             fs.unlinkSync(
-              path.join("./backend/routes/uploads/" + req.file.filename)
+              path.join(__dirname, "/uploads/", req.file.filename)
             );
             return res.status(200).json({ status: 0 });
           })
