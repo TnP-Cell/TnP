@@ -144,6 +144,10 @@ img {
   width: 100%;
 }
 
+.nav-logo:hover {
+  cursor: pointer;
+}
+
 .nav-list {
   display: flex;
   margin-left: 10%;
@@ -152,7 +156,8 @@ img {
 }
 
 .nav-item {
-  margin-right: 4%;
+  margin-left: 1%;
+  margin-right: 1%;
   min-width: 40%;
   text-align: center;
   display: flex;
@@ -1372,7 +1377,7 @@ button:hover {
 
   .nav-logo {
     display: block;
-    width: 70%;
+    width: 40%;
   }
   .phonenav {
     display: block;
@@ -1410,6 +1415,10 @@ button:hover {
 @media (max-width: 992px) {
   .container-b .row {
     flex-direction: column-reverse;
+  }
+  .nav-logo {
+    display: block;
+    width: 40%;
   }
 
   .col-2 {
@@ -1671,6 +1680,10 @@ button:hover {
   .card1-new,
   .card2-new {
     height: 75vh;
+  }
+  .nav-logo {
+    display: block;
+    width: 60%;
   }
   .card1,
   .card2 {
