@@ -877,6 +877,11 @@ button:hover {
   width: calc(40% - 20px);
   display: flex;
   justify-content: space-around;
+  padding: 2%;
+}
+
+.image-d img {
+  border-radius: 40px;
 }
 
 .text-d {
