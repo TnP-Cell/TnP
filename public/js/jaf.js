@@ -13,3 +13,5 @@ document.forms["recruit"].addEventListener("submit", (e) => {
       alert("Something Went Wrong" + err);
     });
 });
+
+window.location.href="/"
