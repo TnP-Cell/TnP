@@ -14,4 +14,4 @@ document.forms["recruit"].addEventListener("submit", (e) => {
     });
 });
 
-window.location.href="/"
+// window.location.href="/"
