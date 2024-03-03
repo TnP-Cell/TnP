@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -80,7 +79,8 @@
       href="/assets/square-logo.png"
       sizes="96x96"
     />
-    <script defer type="text/javascript" src="/js/jaf.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script defer type="text/javascript" src="/js/jaf.js"></script>    
   </head>
 
   <body>
@@ -776,8 +776,19 @@
                 </div>
               </div>
               <div class="new_btn submit-btn">
-                <div class="g-recaptcha" data-sitekey="6LcPvncpAAAAAPP9N9KT1PYMNg3QnAtUjosuOfeC"></div>
-                <button type="submit" class="btn">Submit now</button>
+                <!-- <div
+                  class="g-recaptcha"
+                  data-sitekey="6LcPvncpAAAAAPP9N9KT1PYMNg3QnAtUjosuOfeC"
+                ></div> -->
+                <button
+                  type="submit"
+                  class="g-recaptcha btn"
+                  data-sitekey="6LeMoIcpAAAAAH1X0nWdtCgQqpXD7Q87vDrb2lyU"
+                  data-callback="onSubmit"
+                  data-action="submit"
+                >
+                  Submit now
+                </button>
               </div>
             </form>
           </div>

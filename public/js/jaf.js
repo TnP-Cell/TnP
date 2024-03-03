@@ -14,4 +14,8 @@ document.forms["recruit"].addEventListener("submit", (e) => {
     });
 });
 
+function onSubmit(token) {
+  document.getElementById("demo-form").submit();
+}
+
 // window.location.href="/"
